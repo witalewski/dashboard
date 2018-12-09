@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { borderColor } from '../global/styleConstants';
 
 const HeaderStyled = styled.header`
   width: 100%;
@@ -7,7 +8,7 @@ const HeaderStyled = styled.header`
   padding: 24px 36px;
 
   background: white;
-  border: 1px solid #D3DBE6;
+  border: 1px solid ${borderColor};
 
   .title {
     font-weight: normal;
