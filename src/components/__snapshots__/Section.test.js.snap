@@ -1,11 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Section matches snapshot 1`] = `
-<ForwardRef(render)>
+<ForwardRef(render)
+  className="section"
+>
   <h2
     className="title"
   >
     Dashboard
   </h2>
+  <div
+    className="content"
+  >
+    Section content
+  </div>
 </ForwardRef(render)>
 `;
