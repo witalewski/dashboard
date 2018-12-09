@@ -1,15 +1,16 @@
-import { observable, action, computed } from 'mobx';
+import { observable, action } from 'mobx';
+import mockChartData from './fixtures/mockChartData.json';
 
 class AppState {
-  @observable name = '';
+  @observable chartData;
 
-  @action setName = name => {
-    this.name = name;
+  @action setChartData = chartData => {
+    this.chartData = chartData;
   };
 
-  @computed get greeting() {
-    return `Hello, ${this.name || 'User'}!`;
-  }
+  @action loadMockChartData = () => {
+    this.setChartData(mockChartData);
+  };
 }
 
 export { AppState };

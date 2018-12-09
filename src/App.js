@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Provider } from 'mobx-react';
 import { AppState } from './AppState';
-import { Greeter } from './Greeter';
 
 class App extends Component {
   constructor() {
@@ -13,7 +12,7 @@ class App extends Component {
     return (
       <div className="App">
         <Provider appState={this.appState}>
-          <Greeter />
+          <h1>It works</h1>
         </Provider>
       </div>
     );

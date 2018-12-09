@@ -1,4 +1,5 @@
 import { AppState } from './AppState';
+import mockChartData from './fixtures/mockChartData.json';
 
 describe('AppState', () => {
   let appState;
@@ -7,13 +8,14 @@ describe('AppState', () => {
     appState = new AppState();
   });
 
-  it('displays greeting when no name is set', () => {
-    expect(appState.greeting).toBe('Hello, User!');
+  it('sets chart data', () => {
+    const data = { foo: 'bar'};
+    appState.setChartData(data);
+    expect(appState.chartData).toEqual(data);
   });
 
-  it('sets name and greeting', () => {
-    appState.setName('Kris');
-    expect(appState.name).toBe('Kris');
-    expect(appState.greeting).toBe('Hello, Kris!');
+  it('loads mock data', () => {
+    appState.loadMockChartData();
+    expect(appState.chartData).toEqual(mockChartData);
   });
 });
