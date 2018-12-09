@@ -1,10 +1,10 @@
 import mockChartData from '../fixtures/mockChartData.json';
-import { getLabelMapForCombinedChart } from './getLabelMapForCombinedChart';
+import { getLabelMap } from './getLabelMap';
 import { mapDataSetLabels } from './mapDataSetLabels';
 
 describe('getLowerRangeSeriesKeys', () => {
   it('returns lower half of all series baser on average value', () => {
-    const labelMap = getLabelMapForCombinedChart(mockChartData.monthlySales);
+    const labelMap = getLabelMap(mockChartData.monthlySales);
     const result = mapDataSetLabels(labelMap, mockChartData.monthlySales.data);
     expect(result).toEqual([
       {

@@ -2,7 +2,7 @@ import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import mockChartData from '../../fixtures/mockChartData.json';
 import { BarChartSection } from './BarChartSection';
-import { getLabelMapForCombinedChart } from '../../utils/getLabelMapForCombinedChart';
+import { getLabelMap } from '../../utils/getLabelMap';
 
 describe('BarChartSection', () => {
   it('matches snapshot with mock data', () => {
@@ -12,7 +12,7 @@ describe('BarChartSection', () => {
         title="Monthly Sales"
         data={mockChartData.monthlySales.data}
         dataTransform={e => e}
-        labelMap={getLabelMapForCombinedChart(mockChartData.monthlySales)}
+        labelMap={getLabelMap(mockChartData.monthlySales)}
       />
     );
     const result = renderer.getRenderOutput();
