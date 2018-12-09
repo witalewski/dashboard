@@ -6,6 +6,7 @@ import { SummarySectionWrapper } from './sectionWrappers/SummarySectionWrapper';
 import { MonthlySalesSectionWrapper } from './sectionWrappers/MonthlySalesSectionWrapper';
 import { MostPopularOffersSectionWrapper } from './sectionWrappers/MostPopularOffersSectionWrapper';
 import { PaymentMethodsSectionWrapper } from './sectionWrappers/PaymentMethodsSectionWrapper';
+import { DevicesSectionWrapper } from './sectionWrappers/DevicesSectionWrapper';
 
 const MainViewStyled = styled.main`
   display: flex;
@@ -67,9 +68,10 @@ export class MainView extends Component {
             className="payment-methods-section-wrapper"
             data={chartData.paymentMethods.data}
           />
-          <Section title="Devices" className="devices-section-wrapper">
-            [Section Content]
-          </Section>
+          <DevicesSectionWrapper
+            className="devices-section-wrapper"
+            data={chartData.devices.data}
+          />
         </div>
         <Section title="Revenue" className="revenue-section-wrapper">
           [Section Content]

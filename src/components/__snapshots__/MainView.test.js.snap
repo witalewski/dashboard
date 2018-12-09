@@ -120,12 +120,33 @@ Revenue: $35,441.54",
         ]
       }
     />
-    <Section
+    <DevicesSectionWrapper
       className="devices-section-wrapper"
-      title="Devices"
-    >
-      [Section Content]
-    </Section>
+      data={
+        Array [
+          Object {
+            "label": "Desktop",
+            "tooltip": null,
+            "value": 6013,
+          },
+          Object {
+            "label": "Tablet",
+            "tooltip": null,
+            "value": 1577,
+          },
+          Object {
+            "label": "Smartphone",
+            "tooltip": null,
+            "value": 1252,
+          },
+          Object {
+            "label": "TV",
+            "tooltip": null,
+            "value": 404,
+          },
+        ]
+      }
+    />
   </div>
   <Section
     className="revenue-section-wrapper"
