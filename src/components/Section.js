@@ -16,11 +16,18 @@ const SectionStyled = styled.section`
     font-size: 16px;
     text-transform: uppercase;
   }
+
+
+.section-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 `;
 
 export const Section = ({ className, title, children }) => (
   <SectionStyled className={className}>
     <h2 className="title">{title}</h2>
-    {children}
+    <div className="section-content">{children}</div>
   </SectionStyled>
 );

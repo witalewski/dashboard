@@ -93,12 +93,33 @@ Revenue: $35,441.54",
         ]
       }
     />
-    <Section
+    <PaymentMethodsSectionWrapper
       className="payment-methods-section-wrapper"
-      title="Payment methods"
-    >
-      [Section Content]
-    </Section>
+      data={
+        Array [
+          Object {
+            "label": "VISA",
+            "tooltip": "Revenue: $339,938.46",
+            "value": 12125,
+          },
+          Object {
+            "label": "MasterCard",
+            "tooltip": "Revenue: $220,377.81",
+            "value": 7880,
+          },
+          Object {
+            "label": "PayPal",
+            "tooltip": "Revenue: $221,042.77",
+            "value": 8092,
+          },
+          Object {
+            "label": "iDeal",
+            "tooltip": "Revenue: $120.6",
+            "value": 15,
+          },
+        ]
+      }
+    />
     <Section
       className="devices-section-wrapper"
       title="Devices"

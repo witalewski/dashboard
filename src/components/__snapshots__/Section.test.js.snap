@@ -10,9 +10,13 @@ exports[`Section matches snapshot 1`] = `
     Dashboard
   </h2>
   <div
-    className="content"
+    className="section-content"
   >
-    Section content
+    <div
+      className="content"
+    >
+      Section content
+    </div>
   </div>
 </ForwardRef(render)>
 `;
