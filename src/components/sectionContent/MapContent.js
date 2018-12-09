@@ -16,6 +16,15 @@ const MapContentStyled = styled.div`
     position: relative;
     flex: 1 1 100%;
   }
+
+  .tooltip {
+    margin: 0px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(204, 204, 204);
+    font-size: 14px;
+    white-space: nowrap;
+  }
 `;
 
 export class MapContent extends Component {
@@ -36,14 +45,14 @@ export class MapContent extends Component {
           {}
         ),
         geographyConfig: {
-          highlightFillColor: chartColors[1],
+          highlightFillColor: chartColors[2],
           popupTemplate: function(geo, data) {
             return [
-              '<div class="hoverinfo"><strong>',
+              '<div class="tooltip"><p><strong>',
               geo.properties.name,
-              '</strong><br/>',
+              '</strong></p><p>',
               data.tooltip.replace(/\n/g, '<br/>'),
-              '</div>',
+              '</p></div>',
             ].join('');
           },
         },
@@ -52,9 +61,9 @@ export class MapContent extends Component {
   }
   render() {
     return (
-        <MapContentStyled>
-          <div className="map-container" />
-        </MapContentStyled>
+      <MapContentStyled>
+        <div className="map-container" />
+      </MapContentStyled>
     );
   }
 }
