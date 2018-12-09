@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Provider } from 'mobx-react';
 import { AppState } from './AppState';
+import { Header } from './components/Header';
+import './index.css';
 
 class App extends Component {
   constructor() {
@@ -10,11 +12,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Provider appState={this.appState}>
-          <h1>It works</h1>
-        </Provider>
-      </div>
+      <Provider appState={this.appState}>
+        <div className="App">
+          <Header title="Dashboard" />
+        </div>
+      </Provider>
     );
   }
 }
