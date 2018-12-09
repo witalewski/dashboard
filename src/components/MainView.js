@@ -4,8 +4,8 @@ import { inject, observer } from 'mobx-react';
 import { Section } from './Section';
 import { SummarySectionWrapper } from './sectionWrappers/SummarySectionWrapper';
 import { MonthlySalesSectionWrapper } from './sectionWrappers/MonthlySalesSectionWrapper';
-import { PieChartSection } from './sectionTypes/PieChartSection';
-import { LineChartSection } from './sectionTypes/LineChartSection';
+import { PieChartSection } from './sections/PieChartSection';
+import { LineChartSection } from './sections/LineChartSection';
 
 const MainViewStyled = styled.main`
   display: flex;

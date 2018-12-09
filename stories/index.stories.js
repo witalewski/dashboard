@@ -9,8 +9,8 @@ import { Header } from '../src/components/Header';
 import { Section } from '../src/components/Section';
 import { MainView } from '../src/components/MainView';
 import { HorizontalBar } from '../src/components/charts/HorizontalBar';
-import { PieChartSection } from '../src/components/sectionTypes/PieChartSection';
-import { LineChartSection } from '../src/components/sectionTypes/LineChartSection';
+import { PieChartSection } from '../src/components/sections/PieChartSection';
+import { LineChartSection } from '../src/components/sections/LineChartSection';
 
 storiesOf('MainView', module).add('with mock data', () => (
   <MainView chartData={mockChartData} loadMockChartData={() => {}} />
