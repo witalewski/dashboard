@@ -75,13 +75,13 @@ exports[`PieChartSection matches snapshot with mock devices data 1`] = `
         fill="#5db990"
       />
       <Cell
-        fill="#558ca0"
-      />
-      <Cell
         fill="#864ba5"
       />
       <Cell
-        fill="#829ac0"
+        fill="#a7e17a"
+      />
+      <Cell
+        fill="#558ca0"
       />
     </Pie>
     <Tooltip
@@ -207,13 +207,13 @@ exports[`PieChartSection matches snapshot with mock most popular options data 1`
         fill="#5db990"
       />
       <Cell
-        fill="#558ca0"
-      />
-      <Cell
         fill="#864ba5"
       />
       <Cell
-        fill="#829ac0"
+        fill="#a7e17a"
+      />
+      <Cell
+        fill="#558ca0"
       />
     </Pie>
     <Tooltip
@@ -339,13 +339,13 @@ exports[`PieChartSection matches snapshot with mock payment methods data 1`] = `
         fill="#5db990"
       />
       <Cell
-        fill="#558ca0"
-      />
-      <Cell
         fill="#864ba5"
       />
       <Cell
-        fill="#829ac0"
+        fill="#a7e17a"
+      />
+      <Cell
+        fill="#558ca0"
       />
     </Pie>
     <Tooltip
