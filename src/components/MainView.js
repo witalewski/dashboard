@@ -79,11 +79,6 @@ export class MainView extends Component {
           title="Revenue This Month vs Revenue Previous Month"
           className="revenue-section"
           source={chartData.revenueMonthToMonth}
-          labelMap={{
-            x: 'x',
-            y: 'Last month',
-            y2: 'Previous month'
-          }}
         />
         <Section title="Geography" className="geography-section">
           [Section Content]

@@ -2,13 +2,12 @@ import React from 'react';
 import { LineChartSection } from './LineChartSection';
 import { PieChartSection } from './PieChartSection';
 import { BarChartSection } from './BarChartSection';
-import { getLabelMapForCombinedChart } from '../../utils/getLabelMapForCombinedChart';
+import { getLabelMap } from '../../utils/getLabelMap';
 
 export const ChartSection = ({
   className,
   source,
-  title,
-  labelMap
+  title
 }) => {
   const { dataType, data } = source;
 
@@ -28,7 +27,7 @@ export const ChartSection = ({
           className={className}
           title={title}
           data={data}
-          labelMap={labelMap}
+          labelMap={getLabelMap(source)}
         />
       );
     case 'bar':
@@ -37,7 +36,7 @@ export const ChartSection = ({
           className={className}
           title={title}
           data={data}
-          labelMap={getLabelMapForCombinedChart(source)}
+          labelMap={getLabelMap(source)}
         />
       );
     default:

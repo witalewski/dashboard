@@ -164,13 +164,6 @@ Revenue: $35,441.54",
   </div>
   <ChartSection
     className="revenue-section"
-    labelMap={
-      Object {
-        "x": "x",
-        "y": "Last month",
-        "y2": "Previous month",
-      }
-    }
     source={
       Object {
         "data": Array [

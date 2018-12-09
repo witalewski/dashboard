@@ -4,7 +4,7 @@ import '../src/index.css';
 import { storiesOf } from '@storybook/react';
 
 import mockChartData from '../src/fixtures/mockChartData.json';
-import { getLabelMapForCombinedChart } from '../src/utils/getLabelMapForCombinedChart';
+import { getLabelMap } from '../src/utils/getLabelMap';
 
 import { Header } from '../src/components/Header';
 import { Section } from '../src/components/Section';
@@ -36,11 +36,6 @@ storiesOf('ChartSection', module).add('with various types', () => (
     <ChartSection
       title="Revenue This Month vs Revenue Previous Month"
       source={mockChartData.revenueMonthToMonth}
-      labelMap={{
-        x: 'x',
-        y: 'Last month',
-        y2: 'Previous month'
-      }}
     />
     <h2>dataType: 'pie'</h2>
     <ChartSection
@@ -88,11 +83,7 @@ storiesOf('LineChartSection', module).add(
     <LineChartSection
       title="Revenue This Month vs Revenue Previous Month"
       data={mockChartData.revenueMonthToMonth.data}
-      labelMap={{
-        x: 'x',
-        y: 'Last month',
-        y2: 'Previous month'
-      }}
+      labelMap={getLabelMap(mockChartData.revenueMonthToMonth)}
     />
   )
 );
@@ -103,7 +94,7 @@ storiesOf('BarChartSection', module).add(
     <BarChartSection
       title="Monthly Sales"
       data={mockChartData.monthlySales.data}
-      labelMap={getLabelMapForCombinedChart(mockChartData.monthlySales)}
+      labelMap={getLabelMap(mockChartData.monthlySales)}
     />
   )
 );
