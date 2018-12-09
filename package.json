@@ -1,7 +1,9 @@
 {
-  "name": "mobx-quickstart",
+  "name": "dashboard",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "repository": "https://github.com/witalewski/dashboard.git",
+  "homepage": "https://witalewski.github.io/dashboard",
   "dependencies": {
     "@babel/core": "7.1.0",
     "@emotion/core": "^10.0.0",
@@ -63,7 +65,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js --coverage --coverageReporters=text-lcov | coveralls",
+    "test-watch": "node scripts/test.js --coverage --watch"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -130,6 +133,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.1.6",
-    "@babel/plugin-transform-react-jsx-source": "^7.0.0"
+    "@babel/plugin-transform-react-jsx-source": "^7.0.0",
+    "coveralls": "^3.0.2"
   }
 }
