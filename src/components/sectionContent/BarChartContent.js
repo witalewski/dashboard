@@ -18,7 +18,7 @@ export const BarChartContent = ({ data, labelMap }) => {
   const lowerRangeSeriesKeys = getLowerRangeSeriesKeys(labelMap, processedData);
   return (
     <ComposedChart
-      width={600}
+      width={800}
       height={400}
       data={processedData}
       margin={{ top: 20, right: 20, bottom: 20, left: 20 }}

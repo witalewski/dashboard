@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { inject, observer } from 'mobx-react';
 import { sectionMargin } from '../global/styleConstants';
 import { DataSection } from './DataSection';
+import { Summary } from './Summary';
 
 const MainViewStyled = styled.main`
   display: flex;
@@ -49,7 +50,9 @@ export class MainView extends Component {
           className="summary-section"
           title="Summary"
           source={chartData.summaryChart}
-        />
+        >
+        <Summary data={chartData.summaryChart.data} />
+        </DataSection>
         <DataSection
           title="Monthly Sales"
           className="monthly-sales-section"

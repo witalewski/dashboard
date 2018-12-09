@@ -44,7 +44,7 @@ exports[`BarChartContent matches snapshot with mock data 1`] = `
   }
   reverseStackOrder={false}
   stackOffset="none"
-  width={600}
+  width={800}
 >
   <CartesianGrid
     fill="none"

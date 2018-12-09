@@ -24,13 +24,16 @@ const SectionStyled = styled.section`
   }
 
   .section-content {
+    width: 100%;
+    height: 100%;
+    
     display: flex;
     justify-content: center;
     align-items: center;
   }
 `;
 
-const getSectionContent = (source, className) => {
+const getSectionContent = (source, className, children) => {
   const { dataType, data } = source;
   switch (dataType) {
     case 'pie':
@@ -43,13 +46,13 @@ const getSectionContent = (source, className) => {
     case 'map':
       return <MapContent data={data} />;
     case 'custom':
-      return <CustomContent data={data} />;
+      return <CustomContent data={data} >{children}</CustomContent>;
     default:
       throw new Error(`Unsupported data type: ${dataType}`);
   }
 };
-export const DataSection = ({ className, source, title }) => {
-  const sectionContent = getSectionContent(source, className);
+export const DataSection = ({ className, source, title, children }) => {
+  const sectionContent = getSectionContent(source, className, children);
   return (
     <SectionStyled className={className}>
       <h2 className="title">{title}</h2>

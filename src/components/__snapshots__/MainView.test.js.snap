@@ -19,7 +19,19 @@ exports[`MainView matches snapshot with mock data 1`] = `
       }
     }
     title="Summary"
-  />
+  >
+    <Summary
+      data={
+        Object {
+          "revenueAllTime": 262.22,
+          "revenueAverage": 131.11,
+          "revenueLastMonth": 199.09,
+          "revenueRate": 0.38,
+          "revenueThisMonth": 100.64,
+        }
+      }
+    />
+  </DataSection>
   <DataSection
     className="monthly-sales-section"
     source={

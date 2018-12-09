@@ -15,7 +15,7 @@ export const LineChartContent = ({ data, labelMap }) => {
   const processedData = mapDataSetLabels(labelMap, data);
   return (
     <LineChart
-      width={600}
+      width={800}
       height={300}
       data={processedData}
       margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
