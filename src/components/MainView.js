@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
+import { inject, observer } from 'mobx-react';
 import { sectionMargin } from '../global/styleConstants';
 import { Section } from './Section';
+import { SummarySectionWrapper } from './sectionWrappers/SummarySectionWrapper';
 
 const MainViewStyled = styled.main`
   display: flex;
@@ -12,54 +14,79 @@ const MainViewStyled = styled.main`
     flex-wrap: wrap;
   }
 
-  .summary-section {
+  .summary-section-wrapper {
     flex: 1 3 200px;
   }
 
-  .monthly-sales-section {
+  .monthly-sales-section-wrapper {
     flex: 3 1 600px;
   }
 
-  .most-popular-offers-section,
-  .payment-methods-section,
-  .devices-section {
-      flex: 1 1 200px;
+  .most-popular-offers-section-wrapper,
+  .payment-methods-section-wrapper,
+  .devices-section-wrapper {
+    flex: 1 1 200px;
   }
 `;
 
 export class MainView extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { initialized: false };
+  }
+
+  componentDidMount() {
+    if (!this.state.initialized) {
+      this.props.loadMockChartData();
+      this.setState({ initialized: true });
+    }
+  }
+
   render() {
-    return (
+    const { chartData } = this.props;
+    return chartData ? (
       <MainViewStyled>
         <div className="container">
-          <Section title="Summary" className="summary-section">
-            [Section Content]
-          </Section>
-          <Section title="Monthly Sales" className="monthly-sales-section">
+          <SummarySectionWrapper
+            className="summary-section-wrapper"
+            data={chartData.summaryChart.data}
+          />
+          <Section
+            title="Monthly Sales"
+            className="monthly-sales-section-wrapper"
+          >
             [Section Content]
           </Section>
         </div>
         <div className="container">
           <Section
             title="Most popular offers"
-            className="most-popular-offers-section"
+            className="most-popular-offers-section-wrapper"
           >
             [Section Content]
           </Section>
-          <Section title="Payment methods" className="payment-methods-section">
+          <Section
+            title="Payment methods"
+            className="payment-methods-section-wrapper"
+          >
             [Section Content]
           </Section>
-          <Section title="Devices" className="devices-section">
+          <Section title="Devices" className="devices-section-wrapper">
             [Section Content]
           </Section>
         </div>
-        <Section title="Revenue" className="revenue-section">
-            [Section Content]
-          </Section>
-          <Section title="Geography" className="geography-section">
-            [Section Content]
-          </Section>
+        <Section title="Revenue" className="revenue-section-wrapper">
+          [Section Content]
+        </Section>
+        <Section title="Geography" className="geography-section-wrapper">
+          [Section Content]
+        </Section>
       </MainViewStyled>
-    );
+    ) : null;
   }
 }
+
+export default inject(({ appState }) => ({
+  chartData: appState.chartData,
+  loadMockChartData: appState.loadMockChartData,
+}))(observer(MainView));

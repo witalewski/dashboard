@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HorizontalBar matches snapshot at 0% 1`] = `
+<ForwardRef(render)>
+  <div
+    className="bar"
+    style={
+      Object {
+        "width": "0%",
+      }
+    }
+  />
+  <div
+    className="label label--outside"
+    style={
+      Object {
+        "left": "0%",
+      }
+    }
+  >
+    0
+    %
+  </div>
+</ForwardRef(render)>
+`;
+
+exports[`HorizontalBar matches snapshot at 2% 1`] = `
+<ForwardRef(render)>
+  <div
+    className="bar"
+    style={
+      Object {
+        "width": "2%",
+      }
+    }
+  />
+  <div
+    className="label label--outside"
+    style={
+      Object {
+        "left": "2%",
+      }
+    }
+  >
+    2
+    %
+  </div>
+</ForwardRef(render)>
+`;
+
+exports[`HorizontalBar matches snapshot at 5% 1`] = `
+<ForwardRef(render)>
+  <div
+    className="bar"
+    style={
+      Object {
+        "width": "5%",
+      }
+    }
+  />
+  <div
+    className="label false"
+    style={
+      Object {
+        "left": "5%",
+      }
+    }
+  >
+    5
+    %
+  </div>
+</ForwardRef(render)>
+`;
+
+exports[`HorizontalBar matches snapshot at 10% 1`] = `
+<ForwardRef(render)>
+  <div
+    className="bar"
+    style={
+      Object {
+        "width": "10%",
+      }
+    }
+  />
+  <div
+    className="label false"
+    style={
+      Object {
+        "left": "10%",
+      }
+    }
+  >
+    10
+    %
+  </div>
+</ForwardRef(render)>
+`;
+
+exports[`HorizontalBar matches snapshot at 50% 1`] = `
+<ForwardRef(render)>
+  <div
+    className="bar"
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
+  />
+  <div
+    className="label false"
+    style={
+      Object {
+        "left": "50%",
+      }
+    }
+  >
+    50
+    %
+  </div>
+</ForwardRef(render)>
+`;
+
+exports[`HorizontalBar matches snapshot at 75% 1`] = `
+<ForwardRef(render)>
+  <div
+    className="bar"
+    style={
+      Object {
+        "width": "75%",
+      }
+    }
+  />
+  <div
+    className="label false"
+    style={
+      Object {
+        "left": "75%",
+      }
+    }
+  >
+    75
+    %
+  </div>
+</ForwardRef(render)>
+`;
+
+exports[`HorizontalBar matches snapshot at 100% 1`] = `
+<ForwardRef(render)>
+  <div
+    className="bar"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  />
+  <div
+    className="label false"
+    style={
+      Object {
+        "left": "100%",
+      }
+    }
+  >
+    100
+    %
+  </div>
+</ForwardRef(render)>
+`;
