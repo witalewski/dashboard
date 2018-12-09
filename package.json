@@ -52,6 +52,7 @@
     "react-dev-utils": "^6.1.1",
     "react-dom": "^16.6.3",
     "react-test-renderer": "^16.6.3",
+    "recharts": "^1.4.1",
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.0",
@@ -138,10 +139,10 @@
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.1.6",
     "@babel/plugin-transform-react-jsx-source": "^7.0.0",
-    "coveralls": "^3.0.2",
-    "@storybook/react": "^4.0.12",
     "@storybook/addon-actions": "^4.0.12",
     "@storybook/addon-links": "^4.0.12",
-    "@storybook/addons": "^4.0.12"
+    "@storybook/addons": "^4.0.12",
+    "@storybook/react": "^4.0.12",
+    "coveralls": "^3.0.2"
   }
 }
