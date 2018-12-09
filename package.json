@@ -70,7 +70,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --coverage --collectCoverageFrom=src/**/*.js --collectCoverageFrom=!src/index.js --coverageReporters=text-lcov | coveralls",
     "test-watch": "node scripts/test.js --coverage --collectCoverageFrom=src/**/*.js --collectCoverageFrom=!src/index.js --watch",
-    "predeploy": "yarn build",
+    "predeploy": "yarn build && yarn build-storybook && cp -r storybook-static build",
     "deploy": "gh-pages -d build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
