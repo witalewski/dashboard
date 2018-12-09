@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MostPopularOffersSectionWrapper matches snapshot with mock data 1`] = `
+<ForwardRef(render)>
+  <Section
+    className="most-popular-offers"
+    title="Most popular offers"
+  >
+    <div
+      className="section-content"
+    >
+      SECTION CONTENT
+    </div>
+  </Section>
+</ForwardRef(render)>
+`;

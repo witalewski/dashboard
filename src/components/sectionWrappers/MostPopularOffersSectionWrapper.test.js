@@ -7,7 +7,7 @@ describe('MostPopularOffersSectionWrapper', () => {
   it('matches snapshot with mock data', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-      <MostPopularOffersSectionWrapper data={mockChartData.mostPopuar.data} />
+      <MostPopularOffersSectionWrapper data={mockChartData.mostPopular.data} />
     );
     const result = renderer.getRenderOutput();
     expect(result).toMatchSnapshot();
