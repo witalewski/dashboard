@@ -32,8 +32,8 @@ export const PieChartSection = ({ className, data, title }) => {
           label
           onAnimationEnd={reformatLabels(className)}
         >
-          {percentData.map(({ value }, index) => (
-            <Cell key={value} fill={chartColors[index % chartColors.length]} />
+          {percentData.map(({ value }, i) => (
+            <Cell key={value} fill={chartColors[i % chartColors.length]} />
           ))}
         </Pie>
         <Tooltip />

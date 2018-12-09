@@ -151,12 +151,35 @@ Revenue: $35,441.54",
       title="Devices"
     />
   </div>
-  <Section
+  <LineChartSection
     className="revenue-section-wrapper"
-    title="Revenue"
-  >
-    [Section Content]
-  </Section>
+    data={
+      Array [
+        Object {
+          "x": 1,
+          "y": 2156.75,
+          "y2": 34997.48,
+        },
+        Object {
+          "x": 2,
+          "y": 4688.6,
+          "y2": 34997.12,
+        },
+        Object {
+          "x": 3,
+          "y": 12045.43,
+          "y2": 49449.76,
+        },
+        Object {
+          "x": 4,
+          "y": 33516.68,
+          "y2": 62774.3,
+        },
+      ]
+    }
+    dataTransform={[Function]}
+    title="Revenue This Month vs Revenue Previous Month"
+  />
   <Section
     className="geography-section-wrapper"
     title="Geography"

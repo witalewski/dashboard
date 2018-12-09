@@ -10,6 +10,7 @@ import { Section } from '../src/components/Section';
 import { MainView } from '../src/components/MainView';
 import { HorizontalBar } from '../src/components/charts/HorizontalBar';
 import { PieChartSection } from '../src/components/sectionTypes/PieChartSection';
+import { LineChartSection } from '../src/components/sectionTypes/LineChartSection';
 
 storiesOf('MainView', module).add('with mock data', () => (
   <MainView chartData={mockChartData} loadMockChartData={() => {}} />
@@ -28,9 +29,28 @@ storiesOf('Section', module).add('Sample content', () => (
 storiesOf('PieChartSection', module).add('for various datasets', () => (
   <div>
     <PieChartSection title="Devices" data={mockChartData.devices.data} />
-    <PieChartSection title="Most popular" data={mockChartData.mostPopular.data} />
-    <PieChartSection title="Payment methods" data={mockChartData.paymentMethods.data} />
+    <PieChartSection
+      title="Most popular"
+      data={mockChartData.mostPopular.data}
+    />
+    <PieChartSection
+      title="Payment methods"
+      data={mockChartData.paymentMethods.data}
+    />
   </div>
+));
+
+storiesOf('LineChartSection', module).add('for revenue month-to-month', () => (
+  <LineChartSection
+    title="Revenue This Month vs Revenue Previous Month"
+    className="revenue-section-wrapper"
+    data={mockChartData.revenueMonthToMonth.data}
+    dataTransform={({ x, y, y2 }) => ({
+      x,
+      'This month': y2,
+      'Last month': y,
+    })}
+  />
 ));
 
 storiesOf('HorizontalBar', module).add('at various values', () => (

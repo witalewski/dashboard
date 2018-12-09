@@ -5,6 +5,7 @@ import { Section } from './Section';
 import { SummarySectionWrapper } from './sectionWrappers/SummarySectionWrapper';
 import { MonthlySalesSectionWrapper } from './sectionWrappers/MonthlySalesSectionWrapper';
 import { PieChartSection } from './sectionTypes/PieChartSection';
+import { LineChartSection } from './sectionTypes/LineChartSection';
 
 const MainViewStyled = styled.main`
   display: flex;
@@ -74,9 +75,16 @@ export class MainView extends Component {
             data={chartData.devices.data}
           />
         </div>
-        <Section title="Revenue" className="revenue-section-wrapper">
-          [Section Content]
-        </Section>
+        <LineChartSection
+          title="Revenue This Month vs Revenue Previous Month"
+          className="revenue-section-wrapper"
+          data={chartData.revenueMonthToMonth.data}
+          dataTransform={({ x, y, y2 }) => ({
+            x,
+            'This month': y2,
+            'Last month': y,
+          })}
+        />
         <Section title="Geography" className="geography-section-wrapper">
           [Section Content]
         </Section>
