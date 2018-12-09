@@ -5,7 +5,7 @@ import { Section } from '../Section';
 import { HorizontalBar } from '../charts/HorizontalBar';
 
 const SummaryContentStyled = styled.div`
-  min-width: 400px;
+  min-width: 200px;
 
   display: flex;
   flex-direction: column;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
 import { inject, observer } from 'mobx-react';
+import { sectionMargin } from '../global/styleConstants';
 import { Section } from './Section';
 import { ChartSection } from './sections/ChartSection';
 import { SummarySection } from './sections/SummarySection';
@@ -15,17 +16,17 @@ const MainViewStyled = styled.main`
   }
 
   .summary-section {
-    flex: 1 3 200px;
+    flex: 1 3 calc(25% - ${2 * sectionMargin}px);
   }
 
   .monthly-sales-section {
-    flex: 3 1 600px;
+    flex: 3 1 calc(75% - ${2 * sectionMargin}px);
   }
 
   .most-popular-offers-section,
   .payment-methods-section,
   .devices-section {
-    flex: 1 1 200px;
+    flex: 1 1 calc(33% - ${2 * sectionMargin}px);
   }
 `;
 
