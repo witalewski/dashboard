@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import styled from '@emotion/styled';
 import { inject, observer } from 'mobx-react';
 import { Section } from './Section';
-import { SummarySectionWrapper } from './sectionWrappers/SummarySectionWrapper';
 import { ChartSection } from './sections/ChartSection';
+import { SummarySection } from './sections/SummarySection';
 
 const MainViewStyled = styled.main`
   display: flex;
@@ -47,8 +47,9 @@ export class MainView extends Component {
     return chartData ? (
       <MainViewStyled>
         <div className="container">
-          <SummarySectionWrapper
+          <SummarySection
             className="summary-section-wrapper"
+            title="Summary"
             data={chartData.summaryChart.data}
           />
           <ChartSection

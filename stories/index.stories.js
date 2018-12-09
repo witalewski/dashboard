@@ -14,6 +14,7 @@ import { PieChartSection } from '../src/components/sections/PieChartSection';
 import { LineChartSection } from '../src/components/sections/LineChartSection';
 import { BarChartSection } from '../src/components/sections/BarChartSection';
 import { ChartSection } from '../src/components/sections/ChartSection';
+import { SummarySection } from '../src/components/sections/SummarySection';
 
 storiesOf('MainView', module).add('with mock data', () => (
   <MainView chartData={mockChartData} loadMockChartData={() => {}} />
@@ -32,30 +33,29 @@ storiesOf('Section', module).add('Sample content', () => (
 storiesOf('ChartSection', module).add('with various types', () => (
   <div>
     <h2>dataType: 'line2'</h2>
-  <ChartSection
-    title="Revenue This Month vs Revenue Previous Month"
-    source={mockChartData.revenueMonthToMonth}
-    dataTransform={({ x, y, y2 }) => ({
-      x,
-      'This month': y2,
-      'Last month': y,
-    })}
-  />
-  <h2>dataType: 'pie'</h2>
-  <ChartSection
-    title="Payment methods"
-    source={mockChartData.paymentMethods}
-    dataTransform={e => e}
-  />
-  <h2>dataType: 'bar'</h2>
-  <ChartSection
-    title="Monthly Sales"
-    source={mockChartData.monthlySales}
-    dataTransform={e => e}
-  />
+    <ChartSection
+      title="Revenue This Month vs Revenue Previous Month"
+      source={mockChartData.revenueMonthToMonth}
+      dataTransform={({ x, y, y2 }) => ({
+        x,
+        'This month': y2,
+        'Last month': y,
+      })}
+    />
+    <h2>dataType: 'pie'</h2>
+    <ChartSection
+      title="Payment methods"
+      source={mockChartData.paymentMethods}
+      dataTransform={e => e}
+    />
+    <h2>dataType: 'bar'</h2>
+    <ChartSection
+      title="Monthly Sales"
+      source={mockChartData.monthlySales}
+      dataTransform={e => e}
+    />
   </div>
 ));
-
 
 storiesOf('PieChartSection', module).add('for various datasets', () => (
   <div>
@@ -105,6 +105,10 @@ storiesOf('BarChartSection', module).add(
     />
   )
 );
+
+storiesOf('SummarySection', module).add('for mock data', () => (
+  <SummarySection title="Summary" data={mockChartData.summaryChart.data} />
+));
 
 storiesOf('HorizontalBar', module).add('at various values', () => (
   <div>
