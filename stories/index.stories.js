@@ -19,7 +19,7 @@ storiesOf('Section', module).add('Sample content', () => (
   </Section>
 ));
 storiesOf('MainView', module).add('with mock data', () => (
-  <MainView chartsData={mockChartData} loadMockChartData={() => {}} />
+  <MainView chartData={mockChartData} loadMockChartData={() => {}} />
 ));
 storiesOf('HorizontalBar', module).add('at various values', () => (
   <div>

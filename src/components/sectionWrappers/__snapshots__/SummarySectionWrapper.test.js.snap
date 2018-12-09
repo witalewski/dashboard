@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SummarySectionWrapper matches snapshot with mock data 1`] = `
+<ForwardRef(render)>
+  <Section
+    className="summary"
+    title="Summary"
+  >
+    <div
+      className="current-month-summary"
+    >
+      <div
+        className="current-month-summary__label"
+      >
+        In 
+        December
+         you did
+      </div>
+      <div
+        className="current-month-summary__sum"
+      >
+        $
+        100.64
+      </div>
+      <div
+        className="comparison"
+      >
+        <div
+          className="comparison__label"
+        >
+          Last month you did:
+        </div>
+        <div
+          className="comparison__sum"
+        >
+          $
+          199.09
+        </div>
+      </div>
+      <div
+        className="comparison"
+      >
+        <div
+          className="comparison__label"
+        >
+          Average monthly revenue:
+        </div>
+        <div
+          className="comparison__sum"
+        >
+          $
+          131.11
+        </div>
+      </div>
+      <HorizontalBar
+        percent={38}
+      />
+      <div
+        className="percent-of-average-label"
+      >
+        of your monthly average revenue
+      </div>
+    </div>
+  </Section>
+</ForwardRef(render)>
+`;

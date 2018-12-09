@@ -1,3 +1,97 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MainView matches snapshot 1`] = `null`;
+exports[`MainView matches snapshot out data 1`] = `null`;
+
+exports[`MainView matches snapshot with mock data 1`] = `
+<ForwardRef(render)>
+  <div
+    className="container"
+  >
+    <SummarySectionWrapper
+      className="summary-section-wrapper"
+      data={
+        Object {
+          "revenueAllTime": 262.22,
+          "revenueAverage": 131.11,
+          "revenueLastMonth": 199.09,
+          "revenueRate": 0.38,
+          "revenueThisMonth": 100.64,
+        }
+      }
+    />
+    <MonthlySalesSectionWrapper
+      className="monthly-sales-section-wrapper"
+      data={
+        Object {
+          "bar1-label": "Event",
+          "bar2-label": "Single/Rental",
+          "bar3-label": "Pass",
+          "bar4-label": "Subscription",
+          "data": Array [
+            Object {
+              "bar1": 120.65,
+              "bar2": null,
+              "bar3": 6562.67,
+              "bar4": null,
+              "label": "December",
+              "line1": 12455,
+            },
+            Object {
+              "bar1": 243.64,
+              "bar2": null,
+              "bar3": 7165.2,
+              "bar4": null,
+              "label": "January",
+              "line1": 13468,
+            },
+            Object {
+              "bar1": 345.54,
+              "bar2": 12.4,
+              "bar3": 46744.11,
+              "bar4": null,
+              "label": "February",
+              "line1": 58446,
+            },
+          ],
+          "dataType": "bar",
+          "line1-label": "Transactions",
+        }
+      }
+    />
+  </div>
+  <div
+    className="container"
+  >
+    <Section
+      className="most-popular-offers-section-wrapper"
+      title="Most popular offers"
+    >
+      [Section Content]
+    </Section>
+    <Section
+      className="payment-methods-section-wrapper"
+      title="Payment methods"
+    >
+      [Section Content]
+    </Section>
+    <Section
+      className="devices-section-wrapper"
+      title="Devices"
+    >
+      [Section Content]
+    </Section>
+  </div>
+  <Section
+    className="revenue-section-wrapper"
+    title="Revenue"
+  >
+    [Section Content]
+  </Section>
+  <Section
+    className="geography-section-wrapper"
+    title="Geography"
+  >
+    [Section Content]
+  </Section>
+</ForwardRef(render)>
+`;

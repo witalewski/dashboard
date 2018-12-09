@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MonthlySalesSectionWrapper matches snapshot with mock data 1`] = `
+<ForwardRef(render)>
+  <Section
+    className="monthly-sales"
+    title="Monthly Sales"
+  >
+    <div
+      className="section-content"
+    >
+      SECTION CONTENT
+    </div>
+  </Section>
+</ForwardRef(render)>
+`;
