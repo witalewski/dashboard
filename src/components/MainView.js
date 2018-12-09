@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
 import { inject, observer } from 'mobx-react';
-import { sectionMargin } from '../global/styleConstants';
 import { Section } from './Section';
 import { SummarySectionWrapper } from './sectionWrappers/SummarySectionWrapper';
+import { MonthlySalesSectionWrapper } from './sectionWrappers/MonthlySalesSectionWrapper';
 
 const MainViewStyled = styled.main`
   display: flex;
@@ -51,12 +51,10 @@ export class MainView extends Component {
             className="summary-section-wrapper"
             data={chartData.summaryChart.data}
           />
-          <Section
-            title="Monthly Sales"
+          <MonthlySalesSectionWrapper
             className="monthly-sales-section-wrapper"
-          >
-            [Section Content]
-          </Section>
+            data={chartData.monthlySales}
+          />
         </div>
         <div className="container">
           <Section
