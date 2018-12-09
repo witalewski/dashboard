@@ -17,7 +17,6 @@ import { getLowerRangeSeriesKeys } from '../../utils/getLowerRangeSeriesKeys';
 export const BarChartSection = ({ className, data, title, labelMap }) => {
   const processedData = mapDataSetLabels(labelMap, data);
   const lowerRangeSeriesKeys = getLowerRangeSeriesKeys(labelMap, processedData);
-  console.log(processedData);
   return (
     <Section title={title} className={className}>
       <ComposedChart
