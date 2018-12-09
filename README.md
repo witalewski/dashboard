@@ -11,6 +11,12 @@
 
 Check out the repository and run `yarn` in the repository folder to install depenencies
 
+## Storybook
+
+Run `yarn storybook` to see Storybook of components.
+
+## Scripts
+
 ### `yarn start`
 
 Runs the app in the development mode.<br>
