@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
-import { Section } from '../Section';
 import { chartColors } from '../../global/styleConstants';
 import { iso2ToIso3 } from '../../utils/countryCodeConverter';
 import * as Datamap from 'datamaps';
@@ -19,7 +18,7 @@ const MapContentStyled = styled.div`
   }
 `;
 
-export class MapSection extends Component {
+export class MapContent extends Component {
   componentDidMount() {
     // Datamap causes error in jest: [TypeError: Datamap is not a constructor]
     if (typeof jest === 'undefined') {
@@ -37,6 +36,7 @@ export class MapSection extends Component {
           {}
         ),
         geographyConfig: {
+          highlightFillColor: chartColors[1],
           popupTemplate: function(geo, data) {
             return [
               '<div class="hoverinfo"><strong>',
@@ -51,13 +51,10 @@ export class MapSection extends Component {
     }
   }
   render() {
-    const { title, className } = this.props;
     return (
-      <Section title={title} className={className}>
         <MapContentStyled>
           <div className="map-container" />
         </MapContentStyled>
-      </Section>
     );
   }
 }

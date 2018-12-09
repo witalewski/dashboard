@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { format } from 'date-fns';
-import { Section } from '../Section';
 import { HorizontalBar } from '../charts/HorizontalBar';
 
 const SummaryContentStyled = styled.div`
@@ -12,8 +11,7 @@ const SummaryContentStyled = styled.div`
   justify-content: center;
 `;
 
-export const SummarySection = ({ title, className, data }) => (
-  <Section title={title} className={className}>
+export const CustomContent = ({ data }) => (
     <SummaryContentStyled>
       <div className="current-month-summary__label">
         In {format(new Date(), 'MMMM')} you did
@@ -32,5 +30,4 @@ export const SummarySection = ({ title, className, data }) => (
         of your monthly average revenue
       </div>
     </SummaryContentStyled>
-  </Section>
 );

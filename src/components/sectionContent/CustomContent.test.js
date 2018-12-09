@@ -1,13 +1,13 @@
 import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import mockChartData from '../../fixtures/mockChartData.json';
-import { SummarySection } from './SummarySection';
+import { CustomContent } from './CustomContent';
 
-describe('SummarySection', () => {
+describe('CustomContent', () => {
   it('matches snapshot with mock data', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <SummarySection
+        <CustomContent
         className="summary-section-wrapper"
         title="Summary"
         data={mockChartData.summaryChart.data}

@@ -7,20 +7,23 @@ exports[`MainView matches snapshot with mock data 1`] = `
   <div
     className="container"
   >
-    <SummarySection
+    <DataSection
       className="summary-section"
-      data={
+      source={
         Object {
-          "revenueAllTime": 262.22,
-          "revenueAverage": 131.11,
-          "revenueLastMonth": 199.09,
-          "revenueRate": 0.38,
-          "revenueThisMonth": 100.64,
+          "data": Object {
+            "revenueAllTime": 262.22,
+            "revenueAverage": 131.11,
+            "revenueLastMonth": 199.09,
+            "revenueRate": 0.38,
+            "revenueThisMonth": 100.64,
+          },
+          "dataType": "custom",
         }
       }
       title="Summary"
     />
-    <ChartSection
+    <DataSection
       className="monthly-sales-section"
       source={
         Object {
@@ -64,7 +67,7 @@ exports[`MainView matches snapshot with mock data 1`] = `
   <div
     className="container"
   >
-    <ChartSection
+    <DataSection
       className="most-popular-offers-section"
       source={
         Object {
@@ -99,7 +102,7 @@ Revenue: $35,441.54",
       }
       title="Most Popular Offers"
     />
-    <ChartSection
+    <DataSection
       className="payment-methods-section"
       source={
         Object {
@@ -130,7 +133,7 @@ Revenue: $35,441.54",
       }
       title="Payment Methods"
     />
-    <ChartSection
+    <DataSection
       className="devices-section"
       source={
         Object {
@@ -162,7 +165,7 @@ Revenue: $35,441.54",
       title="Devices"
     />
   </div>
-  <ChartSection
+  <DataSection
     className="revenue-section"
     source={
       Object {
@@ -196,31 +199,34 @@ Revenue: $35,441.54",
     }
     title="Revenue This Month vs Revenue Previous Month"
   />
-  <MapSection
+  <DataSection
     className="geography-section"
-    data={
-      Array [
-        Object {
-          "label": "AU",
-          "tooltip": "Revenue: $56.53
+    source={
+      Object {
+        "data": Array [
+          Object {
+            "label": "AU",
+            "tooltip": "Revenue: $56.53
 Transactions: 3",
-        },
-        Object {
-          "label": "US",
-          "tooltip": "Revenue: $205.8
+          },
+          Object {
+            "label": "US",
+            "tooltip": "Revenue: $205.8
 Transactions: 15",
-        },
-        Object {
-          "label": "NL",
-          "tooltip": "Revenue: $2,077.65
+          },
+          Object {
+            "label": "NL",
+            "tooltip": "Revenue: $2,077.65
 Transactions: 164",
-        },
-        Object {
-          "label": "CA",
-          "tooltip": "Revenue: $23.44
+          },
+          Object {
+            "label": "CA",
+            "tooltip": "Revenue: $23.44
 Transactions: 2",
-        },
-      ]
+          },
+        ],
+        "dataType": "map",
+      }
     }
     title="Geography"
   />

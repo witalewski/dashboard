@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LineChartContent matches snapshot with mock data 1`] = `
+<LineChart
+  barCategoryGap="10%"
+  barGap={4}
+  data={
+    Array [
+      Object {
+        "Days of Month": 1,
+        "Previous Month": 2156.75,
+        "This Month": 34997.48,
+      },
+      Object {
+        "Days of Month": 2,
+        "Previous Month": 4688.6,
+        "This Month": 34997.12,
+      },
+      Object {
+        "Days of Month": 3,
+        "Previous Month": 12045.43,
+        "This Month": 49449.76,
+      },
+      Object {
+        "Days of Month": 4,
+        "Previous Month": 33516.68,
+        "This Month": 62774.3,
+      },
+    ]
+  }
+  height={300}
+  layout="horizontal"
+  margin={
+    Object {
+      "bottom": 5,
+      "left": 20,
+      "right": 30,
+      "top": 5,
+    }
+  }
+  reverseStackOrder={false}
+  stackOffset="none"
+  width={600}
+>
+  <XAxis
+    allowDataOverflow={false}
+    allowDecimals={true}
+    allowDuplicatedCategory={true}
+    dataKey="x"
+    domain={
+      Array [
+        0,
+        "auto",
+      ]
+    }
+    height={30}
+    hide={false}
+    mirror={false}
+    orientation="bottom"
+    padding={
+      Object {
+        "left": 0,
+        "right": 0,
+      }
+    }
+    reversed={false}
+    scale="auto"
+    tickCount={5}
+    type="category"
+    width={0}
+    xAxisId={0}
+  />
+  <YAxis
+    allowDataOverflow={false}
+    allowDecimals={true}
+    allowDuplicatedCategory={true}
+    domain={
+      Array [
+        0,
+        "auto",
+      ]
+    }
+    height={0}
+    hide={false}
+    mirror={false}
+    orientation="left"
+    padding={
+      Object {
+        "bottom": 0,
+        "top": 0,
+      }
+    }
+    reversed={false}
+    scale="auto"
+    tickCount={5}
+    type="number"
+    width={60}
+    yAxisId={0}
+  />
+  <CartesianGrid
+    fill="none"
+    horizontal={true}
+    horizontalFill={Array []}
+    horizontalPoints={Array []}
+    stroke="#ccc"
+    strokeDasharray="3 3"
+    vertical={true}
+    verticalFill={Array []}
+    verticalPoints={Array []}
+  />
+  <Tooltip
+    active={false}
+    animationDuration={400}
+    animationEasing="ease"
+    contentStyle={Object {}}
+    coordinate={
+      Object {
+        "x": 0,
+        "y": 0,
+      }
+    }
+    cursor={true}
+    cursorStyle={Object {}}
+    filterNull={true}
+    isAnimationActive={true}
+    itemSorter={[Function]}
+    itemStyle={Object {}}
+    labelStyle={Object {}}
+    offset={10}
+    separator=" : "
+    useTranslate3d={false}
+    viewBox={
+      Object {
+        "x1": 0,
+        "x2": 0,
+        "y1": 0,
+        "y2": 0,
+      }
+    }
+    wrapperStyle={Object {}}
+  />
+  <Legend
+    align="center"
+    iconSize={14}
+    layout="horizontal"
+    verticalAlign="bottom"
+  />
+  <Line
+    activeDot={true}
+    animateNewValues={true}
+    animationBegin={0}
+    animationDuration={1500}
+    animationEasing="ease"
+    connectNulls={false}
+    dataKey="Previous Month"
+    dot={true}
+    fill="#fff"
+    hide={false}
+    isAnimationActive={true}
+    legendType="line"
+    onAnimationEnd={[Function]}
+    onAnimationStart={[Function]}
+    points={Array []}
+    stroke="#5db990"
+    strokeWidth={1}
+    type="monotone"
+    xAxisId={0}
+    yAxisId={0}
+  />
+  <Line
+    activeDot={true}
+    animateNewValues={true}
+    animationBegin={0}
+    animationDuration={1500}
+    animationEasing="ease"
+    connectNulls={false}
+    dataKey="This Month"
+    dot={true}
+    fill="#fff"
+    hide={false}
+    isAnimationActive={true}
+    legendType="line"
+    onAnimationEnd={[Function]}
+    onAnimationStart={[Function]}
+    points={Array []}
+    stroke="#864ba5"
+    strokeWidth={1}
+    type="monotone"
+    xAxisId={0}
+    yAxisId={0}
+  />
+</LineChart>
+`;

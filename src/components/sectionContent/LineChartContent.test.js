@@ -1,17 +1,18 @@
 import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import mockChartData from '../../fixtures/mockChartData.json';
-import { BarChartSection } from './BarChartSection';
+import { LineChartContent } from './LineChartContent';
 import { getLabelMap } from '../../utils/getLabelMap';
 
-describe('BarChartSection', () => {
+describe('LineChartContent', () => {
   it('matches snapshot with mock data', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-      <BarChartSection
-        title="Monthly Sales"
-        data={mockChartData.monthlySales.data}
-        labelMap={getLabelMap(mockChartData.monthlySales)}
+      <LineChartContent
+        title="Revenue This Month vs Revenue Previous Month"
+        className="revenue-section-wrapper"
+        data={mockChartData.revenueMonthToMonth.data}
+        labelMap={getLabelMap(mockChartData.revenueMonthToMonth)}
       />
     );
     const result = renderer.getRenderOutput();

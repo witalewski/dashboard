@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import styled from '@emotion/styled';
 import { inject, observer } from 'mobx-react';
 import { sectionMargin } from '../global/styleConstants';
-import { Section } from './Section';
-import { ChartSection } from './sections/ChartSection';
-import { SummarySection } from './sections/SummarySection';
-import { MapSection } from './sections/MapSection';
+import { DataSection } from './DataSection';
 
 const MainViewStyled = styled.main`
   display: flex;
@@ -49,43 +46,43 @@ export class MainView extends Component {
     return chartData ? (
       <MainViewStyled>
         <div className="container">
-          <SummarySection
+          <DataSection
             className="summary-section"
             title="Summary"
-            data={chartData.summaryChart.data}
+            source={chartData.summaryChart}
           />
-          <ChartSection
+          <DataSection
             title="Monthly Sales"
             className="monthly-sales-section"
             source={chartData.monthlySales}
           />
         </div>
         <div className="container">
-          <ChartSection
+          <DataSection
             title="Most Popular Offers"
             className="most-popular-offers-section"
             source={chartData.mostPopular}
           />
-          <ChartSection
+          <DataSection
             title="Payment Methods"
             className="payment-methods-section"
             source={chartData.paymentMethods}
           />
-          <ChartSection
+          <DataSection
             title="Devices"
             className="devices-section"
             source={chartData.devices}
           />
         </div>
-        <ChartSection
+        <DataSection
           title="Revenue This Month vs Revenue Previous Month"
           className="revenue-section"
           source={chartData.revenueMonthToMonth}
         />
-        <MapSection
+        <DataSection
           title="Geography"
           className="geography-section"
-          data={chartData.mapChart.data}
+          source={chartData.mapChart}
         />
       </MainViewStyled>
     ) : null;
