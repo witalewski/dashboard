@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BarChartSection matches snapshot with mock data of bar type 1`] = `
+<BarChartSection
+  data={
+    Array [
+      Object {
+        "bar1": 120.65,
+        "bar2": null,
+        "bar3": 6562.67,
+        "bar4": null,
+        "label": "December",
+        "line1": 12455,
+      },
+      Object {
+        "bar1": 243.64,
+        "bar2": null,
+        "bar3": 7165.2,
+        "bar4": null,
+        "label": "January",
+        "line1": 13468,
+      },
+      Object {
+        "bar1": 345.54,
+        "bar2": 12.4,
+        "bar3": 46744.11,
+        "bar4": null,
+        "label": "February",
+        "line1": 58446,
+      },
+    ]
+  }
+  labelMap={
+    Object {
+      "bar1": "Event",
+      "bar2": "Single/Rental",
+      "bar3": "Pass",
+      "bar4": "Subscription",
+      "label": "label",
+      "line1": "Transactions",
+    }
+  }
+  title="Monthly Sales"
+/>
+`;
+
+exports[`BarChartSection matches snapshot with mock data of line2 type 1`] = `
+<LineChartSection
+  data={
+    Array [
+      Object {
+        "x": 1,
+        "y": 2156.75,
+        "y2": 34997.48,
+      },
+      Object {
+        "x": 2,
+        "y": 4688.6,
+        "y2": 34997.12,
+      },
+      Object {
+        "x": 3,
+        "y": 12045.43,
+        "y2": 49449.76,
+      },
+      Object {
+        "x": 4,
+        "y": 33516.68,
+        "y2": 62774.3,
+      },
+    ]
+  }
+  labelMap={
+    Object {
+      "label": "label",
+      "x": "Days of Month",
+      "y": "Previous Month",
+      "y2": "This Month",
+    }
+  }
+  title="Revenue This Month vs Revenue Previous Month"
+/>
+`;
+
+exports[`BarChartSection matches snapshot with mock data of pie type 1`] = `
+<PieChartSection
+  data={
+    Array [
+      Object {
+        "label": "VISA",
+        "tooltip": "Revenue: $339,938.46",
+        "value": 12125,
+      },
+      Object {
+        "label": "MasterCard",
+        "tooltip": "Revenue: $220,377.81",
+        "value": 7880,
+      },
+      Object {
+        "label": "PayPal",
+        "tooltip": "Revenue: $221,042.77",
+        "value": 8092,
+      },
+      Object {
+        "label": "iDeal",
+        "tooltip": "Revenue: $120.6",
+        "value": 15,
+      },
+    ]
+  }
+  title="Payment methods"
+/>
+`;

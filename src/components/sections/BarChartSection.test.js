@@ -11,7 +11,6 @@ describe('BarChartSection', () => {
       <BarChartSection
         title="Monthly Sales"
         data={mockChartData.monthlySales.data}
-        dataTransform={e => e}
         labelMap={getLabelMap(mockChartData.monthlySales)}
       />
     );
