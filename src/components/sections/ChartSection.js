@@ -4,7 +4,12 @@ import { PieChartSection } from './PieChartSection';
 import { BarChartSection } from './BarChartSection';
 import { getLabelMapForCombinedChart } from '../../utils/getLabelMapForCombinedChart';
 
-export const ChartSection = ({ className, source, title, dataTransform }) => {
+export const ChartSection = ({
+  className,
+  source,
+  title,
+  dataTransform = e => e,
+}) => {
   const { dataType, data } = source;
   const processedData = data.map(dataTransform);
 

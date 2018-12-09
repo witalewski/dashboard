@@ -60,24 +60,30 @@ export class MainView extends Component {
           />
         </div>
         <div className="container">
-          <ChartSection
-            title="Most Popular Offers"
-            className="most-popular-offers-section"
-            source={chartData.mostPopular}
-            dataTransform={e => e}
-          />
-          <ChartSection
-            title="Payment Methods"
-            className="payment-methods-section"
-            source={chartData.paymentMethods}
-            dataTransform={e => e}
-          />
-          <ChartSection
-            title="Devices"
-            className="devices-section"
-            source={chartData.devices}
-            dataTransform={e => e}
-          />
+          {[
+            {
+              title: 'Most Popular Offers',
+              className: 'most-popular-offers-section',
+              source: chartData.mostPopular,
+            },
+            {
+              title: 'Payment Methods',
+              className: 'payment-methods-section',
+              source: chartData.paymentMethods,
+            },
+            {
+              title: 'Devices',
+              className: 'most-popular-offers-section',
+              source: chartData.mostPopular,
+            },
+          ].map(({ title, className, source }) => (
+            <ChartSection
+              key={title}
+              title={title}
+              className={className}
+              source={source}
+            />
+          ))}
         </div>
         <ChartSection
           title="Revenue This Month vs Revenue Previous Month"

@@ -67,7 +67,6 @@ exports[`MainView matches snapshot with mock data 1`] = `
   >
     <ChartSection
       className="most-popular-offers-section"
-      dataTransform={[Function]}
       source={
         Object {
           "data": Array [
@@ -103,7 +102,6 @@ Revenue: $35,441.54",
     />
     <ChartSection
       className="payment-methods-section"
-      dataTransform={[Function]}
       source={
         Object {
           "data": Array [
@@ -134,30 +132,33 @@ Revenue: $35,441.54",
       title="Payment Methods"
     />
     <ChartSection
-      className="devices-section"
-      dataTransform={[Function]}
+      className="most-popular-offers-section"
       source={
         Object {
           "data": Array [
             Object {
-              "label": "Desktop",
-              "tooltip": null,
-              "value": 6013,
+              "label": "E946347906_AU",
+              "tooltip": "Brian Foyle Street Stock Memorial
+Revenue: $33",
+              "value": 990,
             },
             Object {
-              "label": "Tablet",
-              "tooltip": null,
-              "value": 1577,
+              "label": "E643516498_AU",
+              "tooltip": "World Series Sprintcars -USC - NSW Rnd 8
+Revenue: $1,564.30",
+              "value": 105,
             },
             Object {
-              "label": "Smartphone",
-              "tooltip": null,
-              "value": 1252,
+              "label": "E657734674_AU",
+              "tooltip": "USC-NSW Rnd 7
+Revenue: $15,347.46",
+              "value": 456,
             },
             Object {
-              "label": "TV",
-              "tooltip": null,
-              "value": 404,
+              "label": "E135478956_AU",
+              "tooltip": "Sprintcar Allstars @ MMS
+Revenue: $35,441.54",
+              "value": 1204,
             },
           ],
           "dataType": "pie",
