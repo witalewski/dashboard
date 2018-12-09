@@ -47,7 +47,7 @@ storiesOf('MainView', module).add('with mock data', () => (
 
 storiesOf('Header', module).add('for Dashboard', () => (
   <DescriptionStyled>
-    <h1>DataSection</h1>
+    <h1>Header</h1>
     <p>Displays header with title.</p>
     <Header title="Dashboard" />
   </DescriptionStyled>
