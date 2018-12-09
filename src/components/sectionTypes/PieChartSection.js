@@ -12,14 +12,14 @@ const reformatLabels = className => () => {
   }
 };
 
-export const MostPopularOffersSectionWrapper = ({ className, data }) => {
+export const PieChartSection = ({ className, data, title }) => {
   const sum = data.reduce((acc, { value }) => acc + value, 0);
   const percentData = data.map(({ value, label }) => ({
     name: label,
     value: Math.round((value * 100) / sum),
   }));
   return (
-    <Section title="Most popular offers" className={className}>
+    <Section title={title} className={className}>
       <PieChart width={350} height={250}>
         <Pie
           data={percentData}

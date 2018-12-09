@@ -62,7 +62,7 @@ exports[`MainView matches snapshot with mock data 1`] = `
   <div
     className="container"
   >
-    <MostPopularOffersSectionWrapper
+    <PieChartSection
       className="most-popular-offers-section-wrapper"
       data={
         Array [
@@ -92,8 +92,9 @@ Revenue: $35,441.54",
           },
         ]
       }
+      title="Most Popular Offers"
     />
-    <PaymentMethodsSectionWrapper
+    <PieChartSection
       className="payment-methods-section-wrapper"
       data={
         Array [
@@ -119,8 +120,9 @@ Revenue: $35,441.54",
           },
         ]
       }
+      title="Payment Methods"
     />
-    <DevicesSectionWrapper
+    <PieChartSection
       className="devices-section-wrapper"
       data={
         Array [
@@ -146,6 +148,7 @@ Revenue: $35,441.54",
           },
         ]
       }
+      title="Devices"
     />
   </div>
   <Section

@@ -4,9 +4,7 @@ import { inject, observer } from 'mobx-react';
 import { Section } from './Section';
 import { SummarySectionWrapper } from './sectionWrappers/SummarySectionWrapper';
 import { MonthlySalesSectionWrapper } from './sectionWrappers/MonthlySalesSectionWrapper';
-import { MostPopularOffersSectionWrapper } from './sectionWrappers/MostPopularOffersSectionWrapper';
-import { PaymentMethodsSectionWrapper } from './sectionWrappers/PaymentMethodsSectionWrapper';
-import { DevicesSectionWrapper } from './sectionWrappers/DevicesSectionWrapper';
+import { PieChartSection } from './sectionTypes/PieChartSection';
 
 const MainViewStyled = styled.main`
   display: flex;
@@ -60,15 +58,18 @@ export class MainView extends Component {
           />
         </div>
         <div className="container">
-          <MostPopularOffersSectionWrapper
+          <PieChartSection
+            title="Most Popular Offers"
             className="most-popular-offers-section-wrapper"
             data={chartData.mostPopular.data}
           />
-          <PaymentMethodsSectionWrapper
+          <PieChartSection
+            title="Payment Methods"
             className="payment-methods-section-wrapper"
             data={chartData.paymentMethods.data}
           />
-          <DevicesSectionWrapper
+          <PieChartSection
+            title="Devices"
             className="devices-section-wrapper"
             data={chartData.devices.data}
           />
