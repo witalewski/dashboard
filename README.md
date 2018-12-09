@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/witalewski/dashboard.svg?branch=master)](https://travis-ci.org/witalewski/dashboard)
 [![Coverage Status](https://coveralls.io/repos/github/witalewski/dashboard/badge.svg?branch=master)](https://coveralls.io/github/witalewski/dashboard?branch=master)
+[![Storybook](https://github.com/storybooks/press/blob/master/badges/storybook.svg)](https://witalewski.github.io/dashboard/storybook-static/)
 
 ## Demo
 
@@ -9,9 +10,21 @@
 
 ## Setup
 
+### Prerequisites
+
+Have yarn installed at 1.12.3 or higher and node at v8.11.4 or higher
+
+### Install dependencies
+
 Check out the repository and run `yarn` in the repository folder to install depenencies
 
-## Storybook
+## Documentation
+
+### Storybook
+
+See components with description in [Storybook](https://witalewski.github.io/dashboard/storybook-static/)
+
+### Running Storybook locally
 
 Run `yarn storybook` to see Storybook of components.
 
