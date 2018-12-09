@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MapContent matches snapshot with mock data 1`] = `
+<ForwardRef(render)>
+  <div
+    className="map-container"
+  />
+</ForwardRef(render)>
+`;
