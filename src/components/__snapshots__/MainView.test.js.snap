@@ -196,11 +196,33 @@ Revenue: $35,441.54",
     }
     title="Revenue This Month vs Revenue Previous Month"
   />
-  <Section
+  <MapSection
     className="geography-section"
+    data={
+      Array [
+        Object {
+          "label": "AU",
+          "tooltip": "Revenue: $56.53
+Transactions: 3",
+        },
+        Object {
+          "label": "US",
+          "tooltip": "Revenue: $205.8
+Transactions: 15",
+        },
+        Object {
+          "label": "NL",
+          "tooltip": "Revenue: $2,077.65
+Transactions: 164",
+        },
+        Object {
+          "label": "CA",
+          "tooltip": "Revenue: $23.44
+Transactions: 2",
+        },
+      ]
+    }
     title="Geography"
-  >
-    [Section Content]
-  </Section>
+  />
 </ForwardRef(render)>
 `;

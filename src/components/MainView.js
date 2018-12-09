@@ -5,6 +5,7 @@ import { sectionMargin } from '../global/styleConstants';
 import { Section } from './Section';
 import { ChartSection } from './sections/ChartSection';
 import { SummarySection } from './sections/SummarySection';
+import { MapSection } from './sections/MapSection';
 
 const MainViewStyled = styled.main`
   display: flex;
@@ -81,9 +82,11 @@ export class MainView extends Component {
           className="revenue-section"
           source={chartData.revenueMonthToMonth}
         />
-        <Section title="Geography" className="geography-section">
-          [Section Content]
-        </Section>
+        <MapSection
+          title="Geography"
+          className="geography-section"
+          data={chartData.mapChart.data}
+        />
       </MainViewStyled>
     ) : null;
   }
