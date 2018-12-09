@@ -29,7 +29,9 @@ storiesOf('Section', module).add('Sample content', () => (
   </Section>
 ));
 
-storiesOf('ChartSection', module).add('with dataType=line2', () => (
+storiesOf('ChartSection', module).add('with various types', () => (
+  <div>
+    <h2>dataType: 'line2'</h2>
   <ChartSection
     title="Revenue This Month vs Revenue Previous Month"
     source={mockChartData.revenueMonthToMonth}
@@ -39,23 +41,21 @@ storiesOf('ChartSection', module).add('with dataType=line2', () => (
       'Last month': y,
     })}
   />
-));
-
-storiesOf('ChartSection', module).add('with dataType=pie', () => (
+  <h2>dataType: 'pie'</h2>
   <ChartSection
     title="Payment methods"
     source={mockChartData.paymentMethods}
     dataTransform={e => e}
   />
-));
-
-storiesOf('ChartSection', module).add('with dataType=bar', () => (
+  <h2>dataType: 'bar'</h2>
   <ChartSection
     title="Monthly Sales"
     source={mockChartData.monthlySales}
     dataTransform={e => e}
   />
+  </div>
 ));
+
 
 storiesOf('PieChartSection', module).add('for various datasets', () => (
   <div>

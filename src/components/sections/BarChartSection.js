@@ -11,44 +11,13 @@ import {
 } from 'recharts';
 import { chartColors } from '../../global/styleConstants';
 import { Section } from '../Section';
-
-const processData = (labelMap, data) =>
-  data.map(item =>
-    Object.keys(item).reduce(
-      (acc, key) => ({ ...acc, [labelMap[key]]: item[key] }),
-      {}
-    )
-  );
-
-const getLowerRangeSeriesKeys = (labelMap, processedData) => {
-  const sortedSeries = Object.values(labelMap)
-    .filter(e => e !== 'label')
-    .map(key => ({
-      key: key,
-      avgValue:
-        processedData.reduce((acc, item) => acc + item[key], 0) /
-        processedData.length,
-    }))
-    .sort((a, b) => a.avgValue - b.avgValue);
-  const halfOfSortedSeriesLength = Math.floor(sortedSeries.length / 2);
-  const lowerRangeSeries = sortedSeries.slice(0, halfOfSortedSeriesLength);
-  if (sortedSeries.length % 2 !== 0) {
-    let middleItem = sortedSeries[halfOfSortedSeriesLength];
-    if (
-      Math.abs(
-        middleItem.avgValue - sortedSeries[halfOfSortedSeriesLength - 1]
-      ) <
-      Math.abs(middleItem.avgValue - sortedSeries[halfOfSortedSeriesLength + 1])
-    ) {
-      lowerRangeSeries.push(middleItem);
-    }
-  }
-  return lowerRangeSeries.map(item => item.key);
-};
+import { mapDataSetLabels } from '../../utils/mapDataSetLabels';
+import { getLowerRangeSeriesKeys } from '../../utils/getLowerRangeSeriesKeys';
 
 export const BarChartSection = ({ className, data, title, labelMap }) => {
-  const processedData = processData(labelMap, data);
+  const processedData = mapDataSetLabels(labelMap, data);
   const lowerRangeSeriesKeys = getLowerRangeSeriesKeys(labelMap, processedData);
+  console.log(processedData);
   return (
     <Section title={title} className={className}>
       <ComposedChart
