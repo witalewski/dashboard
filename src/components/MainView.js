@@ -14,17 +14,17 @@ const MainViewStyled = styled.main`
     flex-wrap: wrap;
   }
 
-  .summary-section-wrapper {
+  .summary-section {
     flex: 1 3 200px;
   }
 
-  .monthly-sales-section-wrapper {
+  .monthly-sales-section {
     flex: 3 1 600px;
   }
 
-  .most-popular-offers-section-wrapper,
-  .payment-methods-section-wrapper,
-  .devices-section-wrapper {
+  .most-popular-offers-section,
+  .payment-methods-section,
+  .devices-section {
     flex: 1 1 200px;
   }
 `;
@@ -48,13 +48,13 @@ export class MainView extends Component {
       <MainViewStyled>
         <div className="container">
           <SummarySection
-            className="summary-section-wrapper"
+            className="summary-section"
             title="Summary"
             data={chartData.summaryChart.data}
           />
           <ChartSection
             title="Monthly Sales"
-            className="monthly-sales-section-wrapper"
+            className="monthly-sales-section"
             source={chartData.monthlySales}
             dataTransform={e => e}
           />
@@ -62,26 +62,26 @@ export class MainView extends Component {
         <div className="container">
           <ChartSection
             title="Most Popular Offers"
-            className="most-popular-offers-section-wrapper"
+            className="most-popular-offers-section"
             source={chartData.mostPopular}
             dataTransform={e => e}
           />
           <ChartSection
             title="Payment Methods"
-            className="payment-methods-section-wrapper"
+            className="payment-methods-section"
             source={chartData.paymentMethods}
             dataTransform={e => e}
           />
           <ChartSection
             title="Devices"
-            className="devices-section-wrapper"
+            className="devices-section"
             source={chartData.devices}
             dataTransform={e => e}
           />
         </div>
         <ChartSection
           title="Revenue This Month vs Revenue Previous Month"
-          className="revenue-section-wrapper"
+          className="revenue-section"
           source={chartData.revenueMonthToMonth}
           dataTransform={({ x, y, y2 }) => ({
             x,
@@ -89,7 +89,7 @@ export class MainView extends Component {
             'Last month': y,
           })}
         />
-        <Section title="Geography" className="geography-section-wrapper">
+        <Section title="Geography" className="geography-section">
           [Section Content]
         </Section>
       </MainViewStyled>

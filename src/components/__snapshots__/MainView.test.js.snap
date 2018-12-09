@@ -8,7 +8,7 @@ exports[`MainView matches snapshot with mock data 1`] = `
     className="container"
   >
     <SummarySection
-      className="summary-section-wrapper"
+      className="summary-section"
       data={
         Object {
           "revenueAllTime": 262.22,
@@ -21,7 +21,7 @@ exports[`MainView matches snapshot with mock data 1`] = `
       title="Summary"
     />
     <ChartSection
-      className="monthly-sales-section-wrapper"
+      className="monthly-sales-section"
       dataTransform={[Function]}
       source={
         Object {
@@ -66,7 +66,7 @@ exports[`MainView matches snapshot with mock data 1`] = `
     className="container"
   >
     <ChartSection
-      className="most-popular-offers-section-wrapper"
+      className="most-popular-offers-section"
       dataTransform={[Function]}
       source={
         Object {
@@ -102,7 +102,7 @@ Revenue: $35,441.54",
       title="Most Popular Offers"
     />
     <ChartSection
-      className="payment-methods-section-wrapper"
+      className="payment-methods-section"
       dataTransform={[Function]}
       source={
         Object {
@@ -134,7 +134,7 @@ Revenue: $35,441.54",
       title="Payment Methods"
     />
     <ChartSection
-      className="devices-section-wrapper"
+      className="devices-section"
       dataTransform={[Function]}
       source={
         Object {
@@ -167,7 +167,7 @@ Revenue: $35,441.54",
     />
   </div>
   <ChartSection
-    className="revenue-section-wrapper"
+    className="revenue-section"
     dataTransform={[Function]}
     source={
       Object {
@@ -202,7 +202,7 @@ Revenue: $35,441.54",
     title="Revenue This Month vs Revenue Previous Month"
   />
   <Section
-    className="geography-section-wrapper"
+    className="geography-section"
     title="Geography"
   >
     [Section Content]
