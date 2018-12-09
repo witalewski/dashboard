@@ -41,7 +41,7 @@ export const PieChartSection = ({ className, data, title }) => {
           width={200}
           align="right"
           layout="vertical"
-          wrapperStyle={{ top: 80, left: 250 }}
+          wrapperStyle={{ top: 80, left: 260 }}
         />
       </PieChart>
     </Section>
