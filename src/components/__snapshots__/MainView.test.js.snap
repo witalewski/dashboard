@@ -4,167 +4,159 @@ exports[`MainView matches snapshot out data 1`] = `null`;
 
 exports[`MainView matches snapshot with mock data 1`] = `
 <ForwardRef(render)>
-  <div
-    className="container"
-  >
-    <DataSection
-      className="summary-section"
-      source={
-        Object {
-          "data": Object {
-            "revenueAllTime": 262.22,
-            "revenueAverage": 131.11,
-            "revenueLastMonth": 199.09,
-            "revenueRate": 0.38,
-            "revenueThisMonth": 100.64,
+  <DataSection
+    className="summary-section"
+    source={
+      Object {
+        "data": Object {
+          "revenueAllTime": 262.22,
+          "revenueAverage": 131.11,
+          "revenueLastMonth": 199.09,
+          "revenueRate": 0.38,
+          "revenueThisMonth": 100.64,
+        },
+        "dataType": "custom",
+      }
+    }
+    title="Summary"
+  />
+  <DataSection
+    className="monthly-sales-section"
+    source={
+      Object {
+        "bar1-label": "Event",
+        "bar2-label": "Single/Rental",
+        "bar3-label": "Pass",
+        "bar4-label": "Subscription",
+        "data": Array [
+          Object {
+            "bar1": 120.65,
+            "bar2": null,
+            "bar3": 6562.67,
+            "bar4": null,
+            "label": "December",
+            "line1": 12455,
           },
-          "dataType": "custom",
-        }
+          Object {
+            "bar1": 243.64,
+            "bar2": null,
+            "bar3": 7165.2,
+            "bar4": null,
+            "label": "January",
+            "line1": 13468,
+          },
+          Object {
+            "bar1": 345.54,
+            "bar2": 12.4,
+            "bar3": 46744.11,
+            "bar4": null,
+            "label": "February",
+            "line1": 58446,
+          },
+        ],
+        "dataType": "bar",
+        "line1-label": "Transactions",
       }
-      title="Summary"
-    />
-    <DataSection
-      className="monthly-sales-section"
-      source={
-        Object {
-          "bar1-label": "Event",
-          "bar2-label": "Single/Rental",
-          "bar3-label": "Pass",
-          "bar4-label": "Subscription",
-          "data": Array [
-            Object {
-              "bar1": 120.65,
-              "bar2": null,
-              "bar3": 6562.67,
-              "bar4": null,
-              "label": "December",
-              "line1": 12455,
-            },
-            Object {
-              "bar1": 243.64,
-              "bar2": null,
-              "bar3": 7165.2,
-              "bar4": null,
-              "label": "January",
-              "line1": 13468,
-            },
-            Object {
-              "bar1": 345.54,
-              "bar2": 12.4,
-              "bar3": 46744.11,
-              "bar4": null,
-              "label": "February",
-              "line1": 58446,
-            },
-          ],
-          "dataType": "bar",
-          "line1-label": "Transactions",
-        }
-      }
-      title="Monthly Sales"
-    />
-  </div>
-  <div
-    className="container"
-  >
-    <DataSection
-      className="most-popular-offers-section"
-      source={
-        Object {
-          "data": Array [
-            Object {
-              "label": "E946347906_AU",
-              "tooltip": "Brian Foyle Street Stock Memorial
+    }
+    title="Monthly Sales"
+  />
+  <DataSection
+    className="most-popular-offers-section"
+    source={
+      Object {
+        "data": Array [
+          Object {
+            "label": "E946347906_AU",
+            "tooltip": "Brian Foyle Street Stock Memorial
 Revenue: $33",
-              "value": 990,
-            },
-            Object {
-              "label": "E643516498_AU",
-              "tooltip": "World Series Sprintcars -USC - NSW Rnd 8
+            "value": 990,
+          },
+          Object {
+            "label": "E643516498_AU",
+            "tooltip": "World Series Sprintcars -USC - NSW Rnd 8
 Revenue: $1,564.30",
-              "value": 105,
-            },
-            Object {
-              "label": "E657734674_AU",
-              "tooltip": "USC-NSW Rnd 7
+            "value": 105,
+          },
+          Object {
+            "label": "E657734674_AU",
+            "tooltip": "USC-NSW Rnd 7
 Revenue: $15,347.46",
-              "value": 456,
-            },
-            Object {
-              "label": "E135478956_AU",
-              "tooltip": "Sprintcar Allstars @ MMS
+            "value": 456,
+          },
+          Object {
+            "label": "E135478956_AU",
+            "tooltip": "Sprintcar Allstars @ MMS
 Revenue: $35,441.54",
-              "value": 1204,
-            },
-          ],
-          "dataType": "pie",
-        }
+            "value": 1204,
+          },
+        ],
+        "dataType": "pie",
       }
-      title="Most Popular Offers"
-    />
-    <DataSection
-      className="payment-methods-section"
-      source={
-        Object {
-          "data": Array [
-            Object {
-              "label": "VISA",
-              "tooltip": "Revenue: $339,938.46",
-              "value": 12125,
-            },
-            Object {
-              "label": "MasterCard",
-              "tooltip": "Revenue: $220,377.81",
-              "value": 7880,
-            },
-            Object {
-              "label": "PayPal",
-              "tooltip": "Revenue: $221,042.77",
-              "value": 8092,
-            },
-            Object {
-              "label": "iDeal",
-              "tooltip": "Revenue: $120.6",
-              "value": 15,
-            },
-          ],
-          "dataType": "pie",
-        }
+    }
+    title="Most Popular Offers"
+  />
+  <DataSection
+    className="payment-methods-section"
+    source={
+      Object {
+        "data": Array [
+          Object {
+            "label": "VISA",
+            "tooltip": "Revenue: $339,938.46",
+            "value": 12125,
+          },
+          Object {
+            "label": "MasterCard",
+            "tooltip": "Revenue: $220,377.81",
+            "value": 7880,
+          },
+          Object {
+            "label": "PayPal",
+            "tooltip": "Revenue: $221,042.77",
+            "value": 8092,
+          },
+          Object {
+            "label": "iDeal",
+            "tooltip": "Revenue: $120.6",
+            "value": 15,
+          },
+        ],
+        "dataType": "pie",
       }
-      title="Payment Methods"
-    />
-    <DataSection
-      className="devices-section"
-      source={
-        Object {
-          "data": Array [
-            Object {
-              "label": "Desktop",
-              "tooltip": null,
-              "value": 6013,
-            },
-            Object {
-              "label": "Tablet",
-              "tooltip": null,
-              "value": 1577,
-            },
-            Object {
-              "label": "Smartphone",
-              "tooltip": null,
-              "value": 1252,
-            },
-            Object {
-              "label": "TV",
-              "tooltip": null,
-              "value": 404,
-            },
-          ],
-          "dataType": "pie",
-        }
+    }
+    title="Payment Methods"
+  />
+  <DataSection
+    className="devices-section"
+    source={
+      Object {
+        "data": Array [
+          Object {
+            "label": "Desktop",
+            "tooltip": null,
+            "value": 6013,
+          },
+          Object {
+            "label": "Tablet",
+            "tooltip": null,
+            "value": 1577,
+          },
+          Object {
+            "label": "Smartphone",
+            "tooltip": null,
+            "value": 1252,
+          },
+          Object {
+            "label": "TV",
+            "tooltip": null,
+            "value": 404,
+          },
+        ],
+        "dataType": "pie",
       }
-      title="Devices"
-    />
-  </div>
+    }
+    title="Devices"
+  />
   <DataSection
     className="revenue-section"
     source={
