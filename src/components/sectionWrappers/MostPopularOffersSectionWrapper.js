@@ -3,24 +3,24 @@ import { PieChart, Pie, Cell, Legend, Tooltip } from 'recharts';
 import { chartColors } from '../../global/styleConstants';
 import { Section } from '../Section';
 
-function reformatLabels() {
+const reformatLabels = className => () => {
   const labels = document.querySelectorAll(
-    '.most-popular-offers .recharts-pie-label-text tspan'
+    `.${className} .recharts-pie-label-text tspan`
   );
   for (let i = 0; i < labels.length; i++) {
     labels[i].textContent = `${labels[i].textContent}%`;
   }
-}
+};
 
 export const MostPopularOffersSectionWrapper = ({ className, data }) => {
   const sum = data.reduce((acc, { value }) => acc + value, 0);
-  const percentData = data.map(({ value, tooltip }) => ({
-    name: tooltip,
+  const percentData = data.map(({ value, label }) => ({
+    name: label,
     value: Math.round((value * 100) / sum),
   }));
   return (
     <Section title="Most popular offers" className={className}>
-      <PieChart width={450} height={250}>
+      <PieChart width={350} height={250}>
         <Pie
           data={percentData}
           cx={120}
@@ -30,7 +30,7 @@ export const MostPopularOffersSectionWrapper = ({ className, data }) => {
           fill="#8884d8"
           dataKey="value"
           label
-          onAnimationEnd={reformatLabels}
+          onAnimationEnd={reformatLabels(className)}
         >
           {percentData.map(({ value }, index) => (
             <Cell key={value} fill={chartColors[index % chartColors.length]} />
@@ -41,7 +41,7 @@ export const MostPopularOffersSectionWrapper = ({ className, data }) => {
           width={200}
           align="right"
           layout="vertical"
-          wrapperStyle={{ top: 50, left: 250 }}
+          wrapperStyle={{ top: 80, left: 250 }}
         />
       </PieChart>
     </Section>

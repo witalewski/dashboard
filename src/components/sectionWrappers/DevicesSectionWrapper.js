@@ -3,14 +3,14 @@ import { PieChart, Pie, Cell, Legend, Tooltip } from 'recharts';
 import { chartColors } from '../../global/styleConstants';
 import { Section } from '../Section';
 
-function reformatLabels() {
+const reformatLabels = className => () => {
   const labels = document.querySelectorAll(
-    '.most-popular-offers .recharts-pie-label-text tspan'
+    `.${className} .recharts-pie-label-text tspan`
   );
   for (let i = 0; i < labels.length; i++) {
     labels[i].textContent = `${labels[i].textContent}%`;
   }
-}
+};
 
 export const DevicesSectionWrapper = ({ className, data }) => {
   const sum = data.reduce((acc, { value }) => acc + value, 0);
@@ -30,7 +30,7 @@ export const DevicesSectionWrapper = ({ className, data }) => {
           fill="#8884d8"
           dataKey="value"
           label
-          onAnimationEnd={reformatLabels}
+          onAnimationEnd={reformatLabels(className)}
         >
           {percentData.map(({ value }, index) => (
             <Cell key={value} fill={chartColors[index % chartColors.length]} />
