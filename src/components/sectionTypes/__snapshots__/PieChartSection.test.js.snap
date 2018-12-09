@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PieChartSection matches snapshot with mock devices data 1`] = `
-<Section>
+<Section
+  title="Devices"
+>
   <PieChart
     barCategoryGap="10%"
     barGap={4}
@@ -131,7 +133,9 @@ exports[`PieChartSection matches snapshot with mock devices data 1`] = `
 `;
 
 exports[`PieChartSection matches snapshot with mock most popular options data 1`] = `
-<Section>
+<Section
+  title="Most Popular"
+>
   <PieChart
     barCategoryGap="10%"
     barGap={4}
@@ -261,7 +265,9 @@ exports[`PieChartSection matches snapshot with mock most popular options data 1`
 `;
 
 exports[`PieChartSection matches snapshot with mock payment methods data 1`] = `
-<Section>
+<Section
+  title="Payment methods"
+>
   <PieChart
     barCategoryGap="10%"
     barGap={4}

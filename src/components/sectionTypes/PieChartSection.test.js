@@ -7,7 +7,7 @@ describe('PieChartSection', () => {
   it('matches snapshot with mock devices data', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-      <PieChartSection data={mockChartData.devices.data} />
+      <PieChartSection title="Devices" data={mockChartData.devices.data} />
     );
     const result = renderer.getRenderOutput();
     expect(result).toMatchSnapshot();
@@ -16,7 +16,10 @@ describe('PieChartSection', () => {
   it('matches snapshot with mock most popular options data', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-      <PieChartSection data={mockChartData.mostPopular.data} />
+      <PieChartSection
+        title="Most Popular"
+        data={mockChartData.mostPopular.data}
+      />
     );
     const result = renderer.getRenderOutput();
     expect(result).toMatchSnapshot();
@@ -25,7 +28,10 @@ describe('PieChartSection', () => {
   it('matches snapshot with mock payment methods data', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-      <PieChartSection data={mockChartData.paymentMethods.data} />
+      <PieChartSection
+        title="Payment methods"
+        data={mockChartData.paymentMethods.data}
+      />
     );
     const result = renderer.getRenderOutput();
     expect(result).toMatchSnapshot();
