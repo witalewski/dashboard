@@ -29,6 +29,7 @@ const MapContentStyled = styled.div`
 
 export class MapContent extends Component {
   componentDidMount() {
+    // Should only be run in the browser, not in test environment
     // Datamap causes error in jest: [TypeError: Datamap is not a constructor]
     if (typeof jest === 'undefined') {
       new Datamap({

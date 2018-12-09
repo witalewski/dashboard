@@ -1,3 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CustomContent matches snapshot with mock data 1`] = `<ForwardRef(render) />`;
+exports[`CustomContent matches snapshot with mock data 1`] = `
+<ForwardRef(render)>
+  <Summary
+    data={
+      Object {
+        "revenueAllTime": 262.22,
+        "revenueAverage": 131.11,
+        "revenueLastMonth": 199.09,
+        "revenueRate": 0.38,
+        "revenueThisMonth": 100.64,
+      }
+    }
+  />
+</ForwardRef(render)>
+`;

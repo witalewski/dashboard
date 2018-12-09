@@ -7,6 +7,6 @@ const CustomContentStyled = styled.div`
   min-width: 200px;
 `;
 
-export const CustomContent = ({ data, children }) => (
+export const CustomContent = ({ children }) => (
   <CustomContentStyled>{children}</CustomContentStyled>
 );

@@ -26,7 +26,7 @@ const SectionStyled = styled.section`
   .section-content {
     width: 100%;
     height: 100%;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +46,7 @@ const getSectionContent = (source, className, children) => {
     case 'map':
       return <MapContent data={data} />;
     case 'custom':
-      return <CustomContent data={data} >{children}</CustomContent>;
+      return <CustomContent data={data}>{children}</CustomContent>;
     default:
       throw new Error(`Unsupported data type: ${dataType}`);
   }

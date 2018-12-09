@@ -54,6 +54,43 @@ exports[`DataSection matches snapshot with mock data of bar type 1`] = `
 </ForwardRef(render)>
 `;
 
+exports[`DataSection matches snapshot with mock data of custom type 1`] = `
+<ForwardRef(render)>
+  <h2
+    className="title"
+  >
+    Map
+  </h2>
+  <div
+    className="section-content"
+  >
+    <CustomContent
+      data={
+        Object {
+          "revenueAllTime": 262.22,
+          "revenueAverage": 131.11,
+          "revenueLastMonth": 199.09,
+          "revenueRate": 0.38,
+          "revenueThisMonth": 100.64,
+        }
+      }
+    >
+      <Summary
+        data={
+          Object {
+            "revenueAllTime": 262.22,
+            "revenueAverage": 131.11,
+            "revenueLastMonth": 199.09,
+            "revenueRate": 0.38,
+            "revenueThisMonth": 100.64,
+          }
+        }
+      />
+    </CustomContent>
+  </div>
+</ForwardRef(render)>
+`;
+
 exports[`DataSection matches snapshot with mock data of line2 type 1`] = `
 <ForwardRef(render)>
   <h2
@@ -96,6 +133,46 @@ exports[`DataSection matches snapshot with mock data of line2 type 1`] = `
           "y": "Previous Month",
           "y2": "This Month",
         }
+      }
+    />
+  </div>
+</ForwardRef(render)>
+`;
+
+exports[`DataSection matches snapshot with mock data of map type 1`] = `
+<ForwardRef(render)>
+  <h2
+    className="title"
+  >
+    Map
+  </h2>
+  <div
+    className="section-content"
+  >
+    <MapContent
+      data={
+        Array [
+          Object {
+            "label": "AU",
+            "tooltip": "Revenue: $56.53
+Transactions: 3",
+          },
+          Object {
+            "label": "US",
+            "tooltip": "Revenue: $205.8
+Transactions: 15",
+          },
+          Object {
+            "label": "NL",
+            "tooltip": "Revenue: $2,077.65
+Transactions: 164",
+          },
+          Object {
+            "label": "CA",
+            "tooltip": "Revenue: $23.44
+Transactions: 2",
+          },
+        ]
       }
     />
   </div>

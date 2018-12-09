@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Summary matches snapshot with mock data 1`] = `
+<ForwardRef(render)>
+  <div>
+    <div
+      className="main-label"
+    >
+      In 
+      December
+       you did
+    </div>
+    <div
+      className="main-sum"
+    >
+      $
+      100.64
+    </div>
+  </div>
+  <div
+    className="container--stretch"
+  >
+    <div
+      className="comparison"
+    >
+      <div
+        className="comparison__label"
+      >
+        Last month you did:
+      </div>
+      <div
+        className="comparison__sum"
+      >
+        $
+        199.09
+      </div>
+    </div>
+    <div
+      className="comparison"
+    >
+      <div
+        className="comparison__label"
+      >
+        Average monthly revenue:
+      </div>
+      <div
+        className="comparison__sum"
+      >
+        $
+        131.11
+      </div>
+    </div>
+  </div>
+  <div
+    className="container--stretch"
+  >
+    <HorizontalBar
+      percent={38}
+    />
+    <div
+      className="percent-of-average-label"
+    >
+      of your monthly average revenue
+    </div>
+  </div>
+</ForwardRef(render)>
+`;
