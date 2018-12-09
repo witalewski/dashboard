@@ -56,44 +56,34 @@ export class MainView extends Component {
             title="Monthly Sales"
             className="monthly-sales-section"
             source={chartData.monthlySales}
-            dataTransform={e => e}
           />
         </div>
         <div className="container">
-          {[
-            {
-              title: 'Most Popular Offers',
-              className: 'most-popular-offers-section',
-              source: chartData.mostPopular,
-            },
-            {
-              title: 'Payment Methods',
-              className: 'payment-methods-section',
-              source: chartData.paymentMethods,
-            },
-            {
-              title: 'Devices',
-              className: 'most-popular-offers-section',
-              source: chartData.mostPopular,
-            },
-          ].map(({ title, className, source }) => (
-            <ChartSection
-              key={title}
-              title={title}
-              className={className}
-              source={source}
-            />
-          ))}
+          <ChartSection
+            title="Most Popular Offers"
+            className="most-popular-offers-section"
+            source={chartData.mostPopular}
+          />
+          <ChartSection
+            title="Payment Methods"
+            className="payment-methods-section"
+            source={chartData.paymentMethods}
+          />
+          <ChartSection
+            title="Devices"
+            className="devices-section"
+            source={chartData.devices}
+          />
         </div>
         <ChartSection
           title="Revenue This Month vs Revenue Previous Month"
           className="revenue-section"
           source={chartData.revenueMonthToMonth}
-          dataTransform={({ x, y, y2 }) => ({
-            x,
-            'This month': y2,
-            'Last month': y,
-          })}
+          labelMap={{
+            x: 'x',
+            y: 'Last month',
+            y2: 'Previous month'
+          }}
         />
         <Section title="Geography" className="geography-section">
           [Section Content]

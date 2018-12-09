@@ -8,10 +8,9 @@ export const ChartSection = ({
   className,
   source,
   title,
-  dataTransform = e => e,
+  labelMap
 }) => {
   const { dataType, data } = source;
-  const processedData = data.map(dataTransform);
 
   switch (dataType) {
     case 'pie':
@@ -19,7 +18,7 @@ export const ChartSection = ({
         <PieChartSection
           className={className}
           title={title}
-          data={processedData}
+          data={data}
         />
       );
     case 'line':
@@ -28,7 +27,8 @@ export const ChartSection = ({
         <LineChartSection
           className={className}
           title={title}
-          data={processedData}
+          data={data}
+          labelMap={labelMap}
         />
       );
     case 'bar':
@@ -36,7 +36,7 @@ export const ChartSection = ({
         <BarChartSection
           className={className}
           title={title}
-          data={processedData}
+          data={data}
           labelMap={getLabelMapForCombinedChart(source)}
         />
       );

@@ -22,7 +22,6 @@ exports[`MainView matches snapshot with mock data 1`] = `
     />
     <ChartSection
       className="monthly-sales-section"
-      dataTransform={[Function]}
       source={
         Object {
           "bar1-label": "Event",
@@ -132,33 +131,29 @@ Revenue: $35,441.54",
       title="Payment Methods"
     />
     <ChartSection
-      className="most-popular-offers-section"
+      className="devices-section"
       source={
         Object {
           "data": Array [
             Object {
-              "label": "E946347906_AU",
-              "tooltip": "Brian Foyle Street Stock Memorial
-Revenue: $33",
-              "value": 990,
+              "label": "Desktop",
+              "tooltip": null,
+              "value": 6013,
             },
             Object {
-              "label": "E643516498_AU",
-              "tooltip": "World Series Sprintcars -USC - NSW Rnd 8
-Revenue: $1,564.30",
-              "value": 105,
+              "label": "Tablet",
+              "tooltip": null,
+              "value": 1577,
             },
             Object {
-              "label": "E657734674_AU",
-              "tooltip": "USC-NSW Rnd 7
-Revenue: $15,347.46",
-              "value": 456,
+              "label": "Smartphone",
+              "tooltip": null,
+              "value": 1252,
             },
             Object {
-              "label": "E135478956_AU",
-              "tooltip": "Sprintcar Allstars @ MMS
-Revenue: $35,441.54",
-              "value": 1204,
+              "label": "TV",
+              "tooltip": null,
+              "value": 404,
             },
           ],
           "dataType": "pie",
@@ -169,7 +164,13 @@ Revenue: $35,441.54",
   </div>
   <ChartSection
     className="revenue-section"
-    dataTransform={[Function]}
+    labelMap={
+      Object {
+        "x": "x",
+        "y": "Last month",
+        "y2": "Previous month",
+      }
+    }
     source={
       Object {
         "data": Array [

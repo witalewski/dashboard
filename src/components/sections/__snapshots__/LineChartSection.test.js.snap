@@ -11,24 +11,24 @@ exports[`LineChartSection matches snapshot with mock data 1`] = `
     data={
       Array [
         Object {
+          "Last month": 2156.75,
+          "Previous month": 34997.48,
           "x": 1,
-          "y": 2156.75,
-          "y2": 34997.48,
         },
         Object {
+          "Last month": 4688.6,
+          "Previous month": 34997.12,
           "x": 2,
-          "y": 4688.6,
-          "y2": 34997.12,
         },
         Object {
+          "Last month": 12045.43,
+          "Previous month": 49449.76,
           "x": 3,
-          "y": 12045.43,
-          "y2": 49449.76,
         },
         Object {
+          "Last month": 33516.68,
+          "Previous month": 62774.3,
           "x": 4,
-          "y": 33516.68,
-          "y2": 62774.3,
         },
       ]
     }
@@ -156,7 +156,7 @@ exports[`LineChartSection matches snapshot with mock data 1`] = `
       animationDuration={1500}
       animationEasing="ease"
       connectNulls={false}
-      dataKey="y"
+      dataKey="Last month"
       dot={true}
       fill="#fff"
       hide={false}
@@ -178,7 +178,7 @@ exports[`LineChartSection matches snapshot with mock data 1`] = `
       animationDuration={1500}
       animationEasing="ease"
       connectNulls={false}
-      dataKey="y2"
+      dataKey="Previous month"
       dot={true}
       fill="#fff"
       hide={false}

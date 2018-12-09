@@ -11,11 +11,11 @@ describe('LineChartSection', () => {
         title="Revenue This Month vs Revenue Previous Month"
         className="revenue-section-wrapper"
         data={mockChartData.revenueMonthToMonth.data}
-        dataTransform={({ x, y, y2 }) => ({
-          x,
-          'This month': y2,
-          'Last month': y,
-        })}
+        labelMap={{
+          x: 'x',
+          y: 'Last month',
+          y2: 'Previous month',
+        }}
       />
     );
     const result = renderer.getRenderOutput();
