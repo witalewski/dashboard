@@ -16,7 +16,16 @@ import { DataSection } from '../src/components/DataSection';
 import { CustomContent } from '../src/components/sectionContent/CustomContent';
 
 storiesOf('MainView', module).add('with mock data', () => (
-  <MainView chartData={mockChartData} loadMockChartData={() => {}} />
+  <div>
+    <h1>MainView</h1>
+    <p>
+      All data sections in the main view are added in a declarative fashion. The
+      DataSection class is responsible for visualizing provided source according
+      to it's type.
+    </p>
+    <p>Layout is defined using flexbox, in a single multi-row container.</p>
+    <MainView chartData={mockChartData} loadMockChartData={() => {}} />
+  </div>
 ));
 
 storiesOf('Header', module).add('for Dashboard', () => (
@@ -25,6 +34,9 @@ storiesOf('Header', module).add('for Dashboard', () => (
 
 storiesOf('DataSection', module).add('with various types', () => (
   <div>
+    <h1>DataSection</h1>
+    <p>Data section renders provided source. Internally, it is using on of the components in sectionContent folder, according to the dataType property of source.</p>
+    <p>This way, visualization of any new data source can be added in a declarative fashion.</p>
     <h2>dataType: 'line2'</h2>
     <DataSection
       title="Revenue This Month vs Revenue Previous Month"
@@ -63,7 +75,7 @@ storiesOf('LineChartContent', module).add('for revenue', () => (
 ));
 
 storiesOf('BarChartContent', module).add(
-  'for monthly sales (data not transformed)',
+  'for monthly sales',
   () => (
     <BarChartContent
       title="Monthly Sales"
