@@ -3,9 +3,7 @@ import styled from '@emotion/styled';
 import { inject, observer } from 'mobx-react';
 import { Section } from './Section';
 import { SummarySectionWrapper } from './sectionWrappers/SummarySectionWrapper';
-import { MonthlySalesSectionWrapper } from './sectionWrappers/MonthlySalesSectionWrapper';
-import { PieChartSection } from './sections/PieChartSection';
-import { LineChartSection } from './sections/LineChartSection';
+import { ChartSection } from './sections/ChartSection';
 
 const MainViewStyled = styled.main`
   display: flex;
@@ -53,32 +51,37 @@ export class MainView extends Component {
             className="summary-section-wrapper"
             data={chartData.summaryChart.data}
           />
-          <MonthlySalesSectionWrapper
+          <ChartSection
+            title="Monthly Sales"
             className="monthly-sales-section-wrapper"
-            data={chartData.monthlySales}
+            source={chartData.monthlySales}
+            dataTransform={e => e}
           />
         </div>
         <div className="container">
-          <PieChartSection
+          <ChartSection
             title="Most Popular Offers"
             className="most-popular-offers-section-wrapper"
-            data={chartData.mostPopular.data}
+            source={chartData.mostPopular}
+            dataTransform={e => e}
           />
-          <PieChartSection
+          <ChartSection
             title="Payment Methods"
             className="payment-methods-section-wrapper"
-            data={chartData.paymentMethods.data}
+            source={chartData.paymentMethods}
+            dataTransform={e => e}
           />
-          <PieChartSection
+          <ChartSection
             title="Devices"
             className="devices-section-wrapper"
-            data={chartData.devices.data}
+            source={chartData.devices}
+            dataTransform={e => e}
           />
         </div>
-        <LineChartSection
+        <ChartSection
           title="Revenue This Month vs Revenue Previous Month"
           className="revenue-section-wrapper"
-          data={chartData.revenueMonthToMonth.data}
+          source={chartData.revenueMonthToMonth}
           dataTransform={({ x, y, y2 }) => ({
             x,
             'This month': y2,

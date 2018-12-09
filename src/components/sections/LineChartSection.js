@@ -11,22 +11,21 @@ import {
 import { chartColors } from '../../global/styleConstants';
 import { Section } from '../Section';
 
-export const LineChartSection = ({ className, data, title, dataTransform }) => {
-  const processedData = data.map(dataTransform);
+export const LineChartSection = ({ className, data, title }) => {
   return (
     <Section title={title} className={className}>
       <LineChart
         width={600}
         height={300}
-        data={processedData}
+        data={data}
         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
       >
-        <XAxis dataKey="x" />
+        <XAxis dataKey={Object.keys(data[0])[0]} />
         <YAxis />
         <CartesianGrid strokeDasharray="3 3" />
         <Tooltip />
         <Legend />
-        {Object.keys(processedData[0])
+        {Object.keys(data[0])
           .slice(1)
           .map((key, i) => (
             <Line

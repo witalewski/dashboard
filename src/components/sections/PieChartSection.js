@@ -27,7 +27,6 @@ export const PieChartSection = ({ className, data, title }) => {
           cy={120}
           innerRadius={40}
           outerRadius={80}
-          fill="#8884d8"
           dataKey="value"
           label
           onAnimationEnd={reformatLabels(className)}

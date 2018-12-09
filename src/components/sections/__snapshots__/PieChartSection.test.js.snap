@@ -56,7 +56,7 @@ exports[`PieChartSection matches snapshot with mock devices data 1`] = `
       }
       dataKey="value"
       endAngle={360}
-      fill="#8884d8"
+      fill="#808080"
       hide={false}
       innerRadius={40}
       isAnimationActive={true}
@@ -188,7 +188,7 @@ exports[`PieChartSection matches snapshot with mock most popular options data 1`
       }
       dataKey="value"
       endAngle={360}
-      fill="#8884d8"
+      fill="#808080"
       hide={false}
       innerRadius={40}
       isAnimationActive={true}
@@ -320,7 +320,7 @@ exports[`PieChartSection matches snapshot with mock payment methods data 1`] = `
       }
       dataKey="value"
       endAngle={360}
-      fill="#8884d8"
+      fill="#808080"
       hide={false}
       innerRadius={40}
       isAnimationActive={true}

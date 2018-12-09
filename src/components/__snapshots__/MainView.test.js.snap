@@ -19,9 +19,10 @@ exports[`MainView matches snapshot with mock data 1`] = `
         }
       }
     />
-    <MonthlySalesSectionWrapper
+    <ChartSection
       className="monthly-sales-section-wrapper"
-      data={
+      dataTransform={[Function]}
+      source={
         Object {
           "bar1-label": "Event",
           "bar2-label": "Single/Rental",
@@ -57,127 +58,146 @@ exports[`MainView matches snapshot with mock data 1`] = `
           "line1-label": "Transactions",
         }
       }
+      title="Monthly Sales"
     />
   </div>
   <div
     className="container"
   >
-    <PieChartSection
+    <ChartSection
       className="most-popular-offers-section-wrapper"
-      data={
-        Array [
-          Object {
-            "label": "E946347906_AU",
-            "tooltip": "Brian Foyle Street Stock Memorial
+      dataTransform={[Function]}
+      source={
+        Object {
+          "data": Array [
+            Object {
+              "label": "E946347906_AU",
+              "tooltip": "Brian Foyle Street Stock Memorial
 Revenue: $33",
-            "value": 990,
-          },
-          Object {
-            "label": "E643516498_AU",
-            "tooltip": "World Series Sprintcars -USC - NSW Rnd 8
+              "value": 990,
+            },
+            Object {
+              "label": "E643516498_AU",
+              "tooltip": "World Series Sprintcars -USC - NSW Rnd 8
 Revenue: $1,564.30",
-            "value": 105,
-          },
-          Object {
-            "label": "E657734674_AU",
-            "tooltip": "USC-NSW Rnd 7
+              "value": 105,
+            },
+            Object {
+              "label": "E657734674_AU",
+              "tooltip": "USC-NSW Rnd 7
 Revenue: $15,347.46",
-            "value": 456,
-          },
-          Object {
-            "label": "E135478956_AU",
-            "tooltip": "Sprintcar Allstars @ MMS
+              "value": 456,
+            },
+            Object {
+              "label": "E135478956_AU",
+              "tooltip": "Sprintcar Allstars @ MMS
 Revenue: $35,441.54",
-            "value": 1204,
-          },
-        ]
+              "value": 1204,
+            },
+          ],
+          "dataType": "pie",
+        }
       }
       title="Most Popular Offers"
     />
-    <PieChartSection
+    <ChartSection
       className="payment-methods-section-wrapper"
-      data={
-        Array [
-          Object {
-            "label": "VISA",
-            "tooltip": "Revenue: $339,938.46",
-            "value": 12125,
-          },
-          Object {
-            "label": "MasterCard",
-            "tooltip": "Revenue: $220,377.81",
-            "value": 7880,
-          },
-          Object {
-            "label": "PayPal",
-            "tooltip": "Revenue: $221,042.77",
-            "value": 8092,
-          },
-          Object {
-            "label": "iDeal",
-            "tooltip": "Revenue: $120.6",
-            "value": 15,
-          },
-        ]
+      dataTransform={[Function]}
+      source={
+        Object {
+          "data": Array [
+            Object {
+              "label": "VISA",
+              "tooltip": "Revenue: $339,938.46",
+              "value": 12125,
+            },
+            Object {
+              "label": "MasterCard",
+              "tooltip": "Revenue: $220,377.81",
+              "value": 7880,
+            },
+            Object {
+              "label": "PayPal",
+              "tooltip": "Revenue: $221,042.77",
+              "value": 8092,
+            },
+            Object {
+              "label": "iDeal",
+              "tooltip": "Revenue: $120.6",
+              "value": 15,
+            },
+          ],
+          "dataType": "pie",
+        }
       }
       title="Payment Methods"
     />
-    <PieChartSection
+    <ChartSection
       className="devices-section-wrapper"
-      data={
-        Array [
-          Object {
-            "label": "Desktop",
-            "tooltip": null,
-            "value": 6013,
-          },
-          Object {
-            "label": "Tablet",
-            "tooltip": null,
-            "value": 1577,
-          },
-          Object {
-            "label": "Smartphone",
-            "tooltip": null,
-            "value": 1252,
-          },
-          Object {
-            "label": "TV",
-            "tooltip": null,
-            "value": 404,
-          },
-        ]
+      dataTransform={[Function]}
+      source={
+        Object {
+          "data": Array [
+            Object {
+              "label": "Desktop",
+              "tooltip": null,
+              "value": 6013,
+            },
+            Object {
+              "label": "Tablet",
+              "tooltip": null,
+              "value": 1577,
+            },
+            Object {
+              "label": "Smartphone",
+              "tooltip": null,
+              "value": 1252,
+            },
+            Object {
+              "label": "TV",
+              "tooltip": null,
+              "value": 404,
+            },
+          ],
+          "dataType": "pie",
+        }
       }
       title="Devices"
     />
   </div>
-  <LineChartSection
+  <ChartSection
     className="revenue-section-wrapper"
-    data={
-      Array [
-        Object {
-          "x": 1,
-          "y": 2156.75,
-          "y2": 34997.48,
-        },
-        Object {
-          "x": 2,
-          "y": 4688.6,
-          "y2": 34997.12,
-        },
-        Object {
-          "x": 3,
-          "y": 12045.43,
-          "y2": 49449.76,
-        },
-        Object {
-          "x": 4,
-          "y": 33516.68,
-          "y2": 62774.3,
-        },
-      ]
-    }
     dataTransform={[Function]}
+    source={
+      Object {
+        "data": Array [
+          Object {
+            "x": 1,
+            "y": 2156.75,
+            "y2": 34997.48,
+          },
+          Object {
+            "x": 2,
+            "y": 4688.6,
+            "y2": 34997.12,
+          },
+          Object {
+            "x": 3,
+            "y": 12045.43,
+            "y2": 49449.76,
+          },
+          Object {
+            "x": 4,
+            "y": 33516.68,
+            "y2": 62774.3,
+          },
+        ],
+        "dataType": "line2",
+        "x-label": "Days of Month",
+        "y-label": "Previous Month",
+        "y2-label": "This Month",
+      }
+    }
     title="Revenue This Month vs Revenue Previous Month"
   />
   <Section
