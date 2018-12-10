@@ -71,7 +71,7 @@ storiesOf('DataSection', module).add('with various types', () => (
     </p>
     <p>
       To avoid defensive programming, this component will fail if provided with
-      no data or invalid data structure. Make sure to provide corrent data in
+      no data or invalid data structure. Make sure to provide correct data in
       the parent container.
     </p>
     <h2>dataType: 'line2'</h2>
@@ -102,7 +102,7 @@ storiesOf('PieChartContent', module).add('for various datasets', () => (
     <p>
       Intended to be used within DataSection. To avoid defensive programming,
       this component will fail if provided with no data or invalid data
-      structure. Make sure to provide corrent data in the parent container.
+      structure. Make sure to provide correct data in the parent container.
     </p>
     <PieChartContent title="Devices" data={mockChartData.devices.data} />
     <PieChartContent
@@ -123,7 +123,7 @@ storiesOf('LineChartContent', module).add('for revenue', () => (
     <p>
       Intended to be used within DataSection. To avoid defensive programming,
       this component will fail if provided with no data or invalid data
-      structure. Make sure to provide corrent data in the parent container.
+      structure. Make sure to provide correct data in the parent container.
     </p>
     <LineChartContent
       title="Revenue This Month vs Revenue Previous Month"
