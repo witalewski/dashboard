@@ -69,6 +69,11 @@ storiesOf('DataSection', module).add('with various types', () => (
       To support a new data type, a component should be created and added to the
       switch statement in DataSection's getSectionContent function.
     </p>
+    <p>
+      To avoid defensive programming, this component will fail if provided with
+      no data or invalid data structure. Make sure to provide corrent data in
+      the parent container.
+    </p>
     <h2>dataType: 'line2'</h2>
     <DataSection
       title="Revenue This Month vs Revenue Previous Month"
@@ -94,7 +99,11 @@ storiesOf('PieChartContent', module).add('for various datasets', () => (
   <DescriptionStyled>
     <h1>PieChartContent</h1>
     <p>Displays provided data as a pie chart.</p>
-    <p>Intended to be used within DataSection.</p>
+    <p>
+      Intended to be used within DataSection. To avoid defensive programming,
+      this component will fail if provided with no data or invalid data
+      structure. Make sure to provide corrent data in the parent container.
+    </p>
     <PieChartContent title="Devices" data={mockChartData.devices.data} />
     <PieChartContent
       title="Most popular"
@@ -111,7 +120,11 @@ storiesOf('LineChartContent', module).add('for revenue', () => (
   <DescriptionStyled>
     <h1>LineChartContent</h1>
     <p>Displays provided data as a line chart.</p>
-    <p>Intended to be used within DataSection.</p>
+    <p>
+      Intended to be used within DataSection. To avoid defensive programming,
+      this component will fail if provided with no data or invalid data
+      structure. Make sure to provide corrent data in the parent container.
+    </p>
     <LineChartContent
       title="Revenue This Month vs Revenue Previous Month"
       data={mockChartData.revenueMonthToMonth.data}
